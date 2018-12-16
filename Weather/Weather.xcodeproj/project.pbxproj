@@ -56,10 +56,10 @@
 			children = (
 				B038381121C6964700750EBD /* AppDelegate.swift */,
 				B038381521C6964700750EBD /* Main.storyboard */,
+				B038382321C6969200750EBD /* LoginFormController.swift */,
 				B038381821C6964700750EBD /* Assets.xcassets */,
 				B038381A21C6964700750EBD /* LaunchScreen.storyboard */,
 				B038381D21C6964700750EBD /* Info.plist */,
-				B038382321C6969200750EBD /* LoginFormController.swift */,
 			);
 			path = Weather;
 			sourceTree = "<group>";

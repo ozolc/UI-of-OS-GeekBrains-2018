@@ -4,6 +4,7 @@
 	classes = {
 	};
 	objectVersion = 50;
+	objects = {
 
 /* Begin PBXBuildFile section */
 		B038383221C6A83200750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038383121C6A83200750EBD /* AppDelegate.swift */; };
