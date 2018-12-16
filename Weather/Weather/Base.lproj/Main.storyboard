@@ -125,8 +125,8 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="loginInput" destination="5gw-g9-Xom" id="fd3-Tf-BiP"/>
-                        <outlet property="passwordInput" destination="5gw-g9-Xom" id="XFf-ww-JVI"/>
+                        <outlet property="loginInput" destination="nSp-Md-MdT" id="kM0-cX-Ozc"/>
+                        <outlet property="passwordInput" destination="b7f-yN-Tk8" id="Ibt-xv-Ex7"/>
                         <outlet property="scrollView" destination="5gw-g9-Xom" id="eFF-Pm-vQe"/>
                     </connections>
                 </viewController>
