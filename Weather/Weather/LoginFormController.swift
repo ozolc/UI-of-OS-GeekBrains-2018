@@ -18,7 +18,11 @@ class LoginFormController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // жест нажатия
+        let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        
+        // присваиваем его UIScrollView
+        scrollView?.addGestureRecognizer(hideKeyboardGesture)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +65,10 @@ class LoginFormController: UIViewController {
         let contentInsets = UIEdgeInsets.zero
         scrollView?.contentInset = contentInsets
         scrollView?.scrollIndicatorInsets = contentInsets
+    }
+    
+    @objc func hideKeyboard() {
+        self.scrollView.endEditing(true)
     }
     
 }
