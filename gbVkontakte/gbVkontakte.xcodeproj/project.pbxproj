@@ -56,10 +56,10 @@
 			children = (
 				B038383121C6A83200750EBD /* AppDelegate.swift */,
 				B038383521C6A83200750EBD /* Main.storyboard */,
+				B038384321C6A87500750EBD /* LoginFormController.swift */,
 				B038383821C6A83200750EBD /* Assets.xcassets */,
 				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
 				B038383D21C6A83200750EBD /* Info.plist */,
-				B038384321C6A87500750EBD /* LoginFormController.swift */,
 			);
 			path = gbVkontakte;
 			sourceTree = "<group>";
