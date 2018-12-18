@@ -1,6 +1,6 @@
 //
 //  LoginFormController.swift
-//  Weather
+//  gbVkontakte
 //
 //  Created by Maksim Nosov on 16/12/2018.
 //  Copyright © 2018 Maksim Nosov. All rights reserved.
@@ -9,20 +9,18 @@
 import UIKit
 
 class LoginFormController: UIViewController {
-
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var loginInput: UITextField!
-    @IBOutlet weak var passwordInput: UITextField!
     
+    @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         
         // присваиваем его UIScrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,20 +38,6 @@ class LoginFormController: UIViewController {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-    }
-    
-    @IBAction func loginButtonPressed(_ sender: Any) {
-        // Получаем текст логина
-        let login = loginInput.text!
-        // Получаем текст-пароль
-        let password = passwordInput.text!
-        
-        // Проверяем, верны ли они
-        if login == "admin" && password == "123456" {
-            print("успешная авторизация")
-        } else {
-            print("неуспешная авторизация")
-        }
     }
     
     // Когда клавиатура появляется
@@ -80,5 +64,36 @@ class LoginFormController: UIViewController {
     @objc func hideKeyboard() {
         self.scrollView.endEditing(true)
     }
+}
+
+@IBDesignable extension UIButton {
     
+    @IBInspectable var borderWidth: CGFloat {
+        set {
+            layer.borderWidth = newValue
+        }
+        get {
+            return layer.borderWidth
+        }
+    }
+    
+    @IBInspectable var cornerRadius: CGFloat {
+        set {
+            layer.cornerRadius = newValue
+        }
+        get {
+            return layer.cornerRadius
+        }
+    }
+    
+    @IBInspectable var borderColor: UIColor? {
+        set {
+            guard let uiColor = newValue else { return }
+            layer.borderColor = uiColor.cgColor
+        }
+        get {
+            guard let color = layer.borderColor else { return nil }
+            return UIColor(cgColor: color)
+        }
+    }
 }

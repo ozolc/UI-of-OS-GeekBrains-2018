@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B038381221C6964700750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038381121C6964700750EBD /* AppDelegate.swift */; };
-		B038381721C6964700750EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038381521C6964700750EBD /* Main.storyboard */; };
-		B038381921C6964700750EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038381821C6964700750EBD /* Assets.xcassets */; };
-		B038381C21C6964700750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038381A21C6964700750EBD /* LaunchScreen.storyboard */; };
-		B038382421C6969200750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038382321C6969200750EBD /* LoginFormController.swift */; };
+		B038383221C6A83200750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038383121C6A83200750EBD /* AppDelegate.swift */; };
+		B038383721C6A83200750EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383521C6A83200750EBD /* Main.storyboard */; };
+		B038383921C6A83200750EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038383821C6A83200750EBD /* Assets.xcassets */; };
+		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
+		B038384421C6A87500750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038384321C6A87500750EBD /* LoginFormController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B038380E21C6964700750EBD /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		B038381121C6964700750EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B038381621C6964700750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B038381821C6964700750EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B038381B21C6964700750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B038381D21C6964700750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B038382321C6969200750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		B038382E21C6A83200750EBD /* gbVkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gbVkontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B038383121C6A83200750EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B038383621C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B038383821C6A83200750EBD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B038383B21C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B038383D21C6A83200750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B038384321C6A87500750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		B038380B21C6964700750EBD /* Frameworks */ = {
+		B038382B21C6A83200750EBD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B038380521C6964700750EBD = {
+		B038382521C6A83200750EBD = {
 			isa = PBXGroup;
 			children = (
-				B038381021C6964700750EBD /* Weather */,
-				B038380F21C6964700750EBD /* Products */,
+				B038383021C6A83200750EBD /* gbVkontakte */,
+				B038382F21C6A83200750EBD /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		B038380F21C6964700750EBD /* Products */ = {
+		B038382F21C6A83200750EBD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B038380E21C6964700750EBD /* Weather.app */,
+				B038382E21C6A83200750EBD /* gbVkontakte.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B038381021C6964700750EBD /* Weather */ = {
+		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
-				B038381121C6964700750EBD /* AppDelegate.swift */,
-				B038381521C6964700750EBD /* Main.storyboard */,
-				B038381821C6964700750EBD /* Assets.xcassets */,
-				B038381A21C6964700750EBD /* LaunchScreen.storyboard */,
-				B038381D21C6964700750EBD /* Info.plist */,
-				B038382321C6969200750EBD /* LoginFormController.swift */,
+				B038383121C6A83200750EBD /* AppDelegate.swift */,
+				B038383521C6A83200750EBD /* Main.storyboard */,
+				B038384321C6A87500750EBD /* LoginFormController.swift */,
+				B038383821C6A83200750EBD /* Assets.xcassets */,
+				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
+				B038383D21C6A83200750EBD /* Info.plist */,
 			);
-			path = Weather;
+			path = gbVkontakte;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B038380D21C6964700750EBD /* Weather */ = {
+		B038382D21C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B038382021C6964700750EBD /* Build configuration list for PBXNativeTarget "Weather" */;
+			buildConfigurationList = B038384021C6A83200750EBD /* Build configuration list for PBXNativeTarget "gbVkontakte" */;
 			buildPhases = (
-				B038380A21C6964700750EBD /* Sources */,
-				B038380B21C6964700750EBD /* Frameworks */,
-				B038380C21C6964700750EBD /* Resources */,
+				B038382A21C6A83200750EBD /* Sources */,
+				B038382B21C6A83200750EBD /* Frameworks */,
+				B038382C21C6A83200750EBD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Weather;
-			productName = Weather;
-			productReference = B038380E21C6964700750EBD /* Weather.app */;
+			name = gbVkontakte;
+			productName = gbVkontakte;
+			productReference = B038382E21C6A83200750EBD /* gbVkontakte.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		B038380621C6964700750EBD /* Project object */ = {
+		B038382621C6A83200750EBD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Maksim Nosov";
 				TargetAttributes = {
-					B038380D21C6964700750EBD = {
+					B038382D21C6A83200750EBD = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
-			buildConfigurationList = B038380921C6964700750EBD /* Build configuration list for PBXProject "Weather" */;
+			buildConfigurationList = B038382921C6A83200750EBD /* Build configuration list for PBXProject "gbVkontakte" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = B038380521C6964700750EBD;
-			productRefGroup = B038380F21C6964700750EBD /* Products */;
+			mainGroup = B038382521C6A83200750EBD;
+			productRefGroup = B038382F21C6A83200750EBD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B038380D21C6964700750EBD /* Weather */,
+				B038382D21C6A83200750EBD /* gbVkontakte */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B038380C21C6964700750EBD /* Resources */ = {
+		B038382C21C6A83200750EBD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B038381C21C6964700750EBD /* LaunchScreen.storyboard in Resources */,
-				B038381921C6964700750EBD /* Assets.xcassets in Resources */,
-				B038381721C6964700750EBD /* Main.storyboard in Resources */,
+				B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */,
+				B038383921C6A83200750EBD /* Assets.xcassets in Resources */,
+				B038383721C6A83200750EBD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B038380A21C6964700750EBD /* Sources */ = {
+		B038382A21C6A83200750EBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B038381221C6964700750EBD /* AppDelegate.swift in Sources */,
-				B038382421C6969200750EBD /* LoginFormController.swift in Sources */,
+				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
+				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		B038381521C6964700750EBD /* Main.storyboard */ = {
+		B038383521C6A83200750EBD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B038381621C6964700750EBD /* Base */,
+				B038383621C6A83200750EBD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		B038381A21C6964700750EBD /* LaunchScreen.storyboard */ = {
+		B038383A21C6A83200750EBD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				B038381B21C6964700750EBD /* Base */,
+				B038383B21C6A83200750EBD /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		B038381E21C6964700750EBD /* Debug */ = {
+		B038383E21C6A83200750EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		B038381F21C6964700750EBD /* Release */ = {
+		B038383F21C6A83200750EBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -278,36 +278,36 @@
 			};
 			name = Release;
 		};
-		B038382121C6964700750EBD /* Debug */ = {
+		B038384121C6A83200750EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = gbVkontakte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ozolc.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		B038382221C6964700750EBD /* Release */ = {
+		B038384221C6A83200750EBD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = gbVkontakte/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = ozolc.Weather;
+				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -317,25 +317,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B038380921C6964700750EBD /* Build configuration list for PBXProject "Weather" */ = {
+		B038382921C6A83200750EBD /* Build configuration list for PBXProject "gbVkontakte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B038381E21C6964700750EBD /* Debug */,
-				B038381F21C6964700750EBD /* Release */,
+				B038383E21C6A83200750EBD /* Debug */,
+				B038383F21C6A83200750EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B038382021C6964700750EBD /* Build configuration list for PBXNativeTarget "Weather" */ = {
+		B038384021C6A83200750EBD /* Build configuration list for PBXNativeTarget "gbVkontakte" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				B038382121C6964700750EBD /* Debug */,
-				B038382221C6964700750EBD /* Release */,
+				B038384121C6A83200750EBD /* Debug */,
+				B038384221C6A83200750EBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = B038380621C6964700750EBD /* Project object */;
+	rootObject = B038382621C6A83200750EBD /* Project object */;
 }
