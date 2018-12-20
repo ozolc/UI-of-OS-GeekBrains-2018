@@ -10,6 +10,10 @@ import UIKit
 
 class LoginFormController: UIViewController {
     
+    
+    @IBOutlet weak var loginTextField: UITextField!
+    @IBOutlet weak var passwordInputTextField: UITextField!
+    
     @IBOutlet weak var scrollView: UIScrollView!
     
     override func viewDidLoad() {
@@ -20,7 +24,6 @@ class LoginFormController: UIViewController {
         
         // присваиваем его UIScrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +41,8 @@ class LoginFormController: UIViewController {
         
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        self.clearAllTextFields(allTextFields: [self.loginTextField, self.passwordInputTextField])
     }
     
     // Когда клавиатура появляется
@@ -64,7 +69,63 @@ class LoginFormController: UIViewController {
     @objc func hideKeyboard() {
         self.scrollView.endEditing(true)
     }
+    
+    // Проверка логина и пароля для перехода перед переходом по segue
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        
+        func CheckUserData() -> Bool {
+            let login = loginTextField.text!
+            let password = passwordInputTextField.text!
+            
+            if login == Data.login && password == Data.password {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        // Проверка данных пользователя.
+        let checkResult = CheckUserData()
+        
+        // Если ошибка в веденных данных - отобразим сообщение.
+        
+        if !checkResult {
+            self.showErrorMessage(title: "Ошибка", message: "Введены неверные данные пользователя")
+                { self.clearAllTextFields(allTextFields: [self.loginTextField, self.passwordInputTextField]) }
+        }
+        // Вернем результат
+        return checkResult
+    }
 }
+
+extension LoginFormController {
+    // Алерт для сообщения об ошибке
+    public func showErrorMessage(title: String, message: String, style: UIAlertController.Style = .alert, closure: () -> ()) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: style)
+        
+        // Создаем кнопку для UIAlertController
+        let action = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        
+        // Добавляем кнопку на UIAlertController
+        alert.addAction(action)
+        
+        // Отображаем UIAlertController
+        present(alert, animated: true)
+        self.clearAllTextFields(allTextFields: [self.loginTextField, self.passwordInputTextField])
+    }
+    
+    public func clearAllTextFields(allTextFields: [UITextField]) {
+        for textField in allTextFields {
+            textField.text = ""
+        }
+        DispatchQueue.main.async {
+            self.loginTextField.becomeFirstResponder()
+        }
+        
+    }
+}
+
 
 @IBDesignable extension UIButton {
     

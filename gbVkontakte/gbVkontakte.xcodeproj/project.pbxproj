@@ -12,6 +12,9 @@
 		B038383921C6A83200750EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038383821C6A83200750EBD /* Assets.xcassets */; };
 		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
 		B038384421C6A87500750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038384321C6A87500750EBD /* LoginFormController.swift */; };
+		B063473321CC26A700950FFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473221CC26A700950FFB /* Constants.swift */; };
+		B063473521CC2E6800950FFB /* TableViewController02.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473421CC2E6800950FFB /* TableViewController02.swift */; };
+		B063473721CC303400950FFB /* TableViewController01.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473621CC303400950FFB /* TableViewController01.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		B038383B21C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B038383D21C6A83200750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038384321C6A87500750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		B063473221CC26A700950FFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B063473421CC2E6800950FFB /* TableViewController02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController02.swift; sourceTree = "<group>"; };
+		B063473621CC303400950FFB /* TableViewController01.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController01.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +61,13 @@
 			isa = PBXGroup;
 			children = (
 				B038383121C6A83200750EBD /* AppDelegate.swift */,
-				B038383521C6A83200750EBD /* Main.storyboard */,
+				B063473221CC26A700950FFB /* Constants.swift */,
 				B038384321C6A87500750EBD /* LoginFormController.swift */,
-				B038383821C6A83200750EBD /* Assets.xcassets */,
+				B063473621CC303400950FFB /* TableViewController01.swift */,
+				B063473421CC2E6800950FFB /* TableViewController02.swift */,
+				B038383521C6A83200750EBD /* Main.storyboard */,
 				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
+				B038383821C6A83200750EBD /* Assets.xcassets */,
 				B038383D21C6A83200750EBD /* Info.plist */,
 			);
 			path = gbVkontakte;
@@ -135,8 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B063473521CC2E6800950FFB /* TableViewController02.swift in Sources */,
+				B063473721CC303400950FFB /* TableViewController01.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
+				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
