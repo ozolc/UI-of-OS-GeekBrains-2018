@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct Data {
     
@@ -14,4 +15,5 @@ struct Data {
     
     static let login = "1"
     static let password = "1"
+    static let background = UIColor(red: 51/255, green: 51/255, blue: 54/255, alpha: 0)
 }

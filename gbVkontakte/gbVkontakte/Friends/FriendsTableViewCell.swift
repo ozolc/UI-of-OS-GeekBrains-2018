@@ -9,9 +9,14 @@
 import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
+    
+    
+    @IBOutlet weak var friendImageView: UIImageView!    
+    @IBOutlet weak var friendNameLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
         // Initialization code
     }
 
@@ -20,5 +25,8 @@ class FriendsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+
 
 }
