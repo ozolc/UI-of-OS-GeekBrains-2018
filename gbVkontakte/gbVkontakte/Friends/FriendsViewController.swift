@@ -8,8 +8,14 @@
 
 import UIKit
 
-class TableViewController01: UITableViewController {
+class FriendsViewController: UITableViewController {
 
+    var friends = [
+        "Chief Cloud": "chiefredcloud.jpg",
+        "Jeronimo": "geronimo.jpeg",
+        "Sitting Bull": "sitting-bull.jpg"
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -18,12 +24,12 @@ class TableViewController01: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return friends.count
     }
     
     @IBAction func back() {
