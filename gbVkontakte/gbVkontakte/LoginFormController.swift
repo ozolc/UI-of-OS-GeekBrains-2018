@@ -10,11 +10,12 @@ import UIKit
 
 class LoginFormController: UIViewController {
     
-    
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordInputTextField: UITextField!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet weak var likeView: RatingControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
