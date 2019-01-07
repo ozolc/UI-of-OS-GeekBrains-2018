@@ -10,10 +10,10 @@ import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
     
-    
-    @IBOutlet weak var friendImageView: UIImageView!    
+    @IBOutlet weak var friendImageView: AvatarImageView!
     @IBOutlet weak var friendNameLabel: UILabel!
-
+    @IBOutlet weak var outerView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
