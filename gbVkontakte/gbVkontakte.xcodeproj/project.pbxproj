@@ -23,6 +23,7 @@
 		B0D9DA3B21D92D8100B1F574 /* NotInGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* NotInGroupTableViewCell.swift */; };
 		B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A021E3668700B90466 /* AvatarImageView.swift */; };
 		B0FD55A321E3872500B90466 /* OuterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A221E3872500B90466 /* OuterView.swift */; };
+		B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A621E38F1300B90466 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		B0D9DA3A21D92D8100B1F574 /* NotInGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotInGroupTableViewCell.swift; sourceTree = "<group>"; };
 		B0FD55A021E3668700B90466 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		B0FD55A221E3872500B90466 /* OuterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterView.swift; sourceTree = "<group>"; };
+		B0FD55A621E38F1300B90466 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				B063473221CC26A700950FFB /* Constants.swift */,
+				B0FD55A621E38F1300B90466 /* RatingControl.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				B063473521CC2E6800950FFB /* GroupsTableViewController.swift in Sources */,
 				B0FD55A321E3872500B90466 /* OuterView.swift in Sources */,
