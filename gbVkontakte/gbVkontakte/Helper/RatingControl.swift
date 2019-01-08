@@ -20,7 +20,7 @@ import UIKit
     private var buttonLike = UIButton(type: .custom)
     private lazy var counterLabel: UILabel = {
         let label = UILabel()
-        label.textColor = UIColor.red
+        label.textColor = UIColor.darkGray
         label.textAlignment = .center
         label.font = UIFont.boldSystemFont(ofSize: 32.0)
         label.text = String(counter)
@@ -30,6 +30,11 @@ import UIKit
     private var isLiked = false {
         didSet {
             counterLabel.text = String(counter)
+            if oldValue == false {
+                counterLabel.textColor = UIColor.red
+            } else {
+                counterLabel.textColor = UIColor.darkGray
+            }
         }
     }
     
