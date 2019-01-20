@@ -9,6 +9,7 @@
 import UIKit
 
 class FriendCollectionViewCell: UICollectionViewCell {
+    var friends = Friends()
     
     @IBOutlet weak var friendImageView: UIImageView!
     

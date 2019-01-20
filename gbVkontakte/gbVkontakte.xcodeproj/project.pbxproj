@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02788D021F4DE5D0054A3B0 /* Friends.swift */; };
 		B038383221C6A83200750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038383121C6A83200750EBD /* AppDelegate.swift */; };
 		B038383721C6A83200750EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383521C6A83200750EBD /* Main.storyboard */; };
 		B038383921C6A83200750EBD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B038383821C6A83200750EBD /* Assets.xcassets */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02788D021F4DE5D0054A3B0 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B038382E21C6A83200750EBD /* gbVkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gbVkontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038383121C6A83200750EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B038383621C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02788CF21F4DE3C0054A3B0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				B02788D021F4DE5D0054A3B0 /* Friends.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		B038382521C6A83200750EBD = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +88,7 @@
 		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				B02788CF21F4DE3C0054A3B0 /* Data */,
 				B05F03F321D90039000836E0 /* Helper */,
 				B05F03EE21D8D4C2000836E0 /* Friend */,
 				B084CE5A21D8A014006018A5 /* Friends */,
@@ -232,6 +243,7 @@
 				B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */,
 				B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
+				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

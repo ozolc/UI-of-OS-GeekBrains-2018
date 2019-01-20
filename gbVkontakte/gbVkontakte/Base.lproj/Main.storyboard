@@ -180,7 +180,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w2P-eI-XGJ" userLabel="OuterView" customClass="OuterView" customModule="gbVkontakte" customModuleProvider="target">
                                             <rect key="frame" x="25" y="0.0" width="65" height="65"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="friend00" translatesAutoresizingMaskIntoConstraints="NO" id="IkO-OK-CYz" customClass="AvatarImageView" customModule="gbVkontakte" customModuleProvider="target">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IkO-OK-CYz" customClass="AvatarImageView" customModule="gbVkontakte" customModuleProvider="target">
                                                     <rect key="frame" x="2.5" y="2.5" width="60" height="60"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="60" id="7Pz-3B-qv0"/>
@@ -518,7 +518,6 @@
     <resources>
         <image name="collegues" width="32" height="32"/>
         <image name="family" width="32" height="32"/>
-        <image name="friend00" width="126.24657440185547" height="126.24657440185547"/>
         <image name="friendTab" width="24" height="24"/>
         <image name="groupsTab" width="18" height="18"/>
         <image name="vk-512" width="512" height="512"/>
