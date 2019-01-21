@@ -17,20 +17,6 @@ let friends = Friends()
     
     let searchController = UISearchController(searchResultsController: nil)
     
-//    let friendsNameArray: [String] = [
-//        "Казаков Андрей",
-//        "Федотов Александр",
-//        "Михайлова Юлия",
-//        "Свиридова Оксана"
-//    ]
-//
-//    let friendsImagesArray: [UIImage] = [
-//        UIImage(named: "friend00.png")!,
-//        UIImage(named: "friend01.png")!,
-//        UIImage(named: "friend02.png")!,
-//        UIImage(named: "friend03.png")!
-//    ]
-    
     // Смещение тени
     @IBInspectable var shadowOffset: CGSize = CGSize(width: 3, height: 3)
 

@@ -155,6 +155,48 @@
             </objects>
             <point key="canvasLocation" x="711.59420289855075" y="-209.59821428571428"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="X2N-vS-Sdd">
+            <objects>
+                <tableViewController id="rIX-Sq-MwG" customClass="NewsTableViewController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BOi-5f-eoT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="302" id="KgS-xk-fkk" customClass="NewsTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="302"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgS-xk-fkk" id="Pyh-qb-AzX">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="301.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u8-0u-ApQ">
+                                            <rect key="frame" x="4" y="4" width="406" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leading" constant="4" id="CCi-h8-Ry0"/>
+                                        <constraint firstAttribute="trailing" secondItem="5u8-0u-ApQ" secondAttribute="trailing" constant="4" id="nHk-AT-2VP"/>
+                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="top" secondItem="Pyh-qb-AzX" secondAttribute="top" constant="4" id="nL8-uP-j4c"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="rIX-Sq-MwG" id="KHT-Um-zik"/>
+                            <outlet property="delegate" destination="rIX-Sq-MwG" id="yl7-hQ-sHM"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Новости" id="HDQ-WM-l2g"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Znl-gb-g0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3442.0289855072465" y="829.6875"/>
+        </scene>
         <!--Друзья-->
         <scene sceneID="y2Q-Tg-nfG">
             <objects>
@@ -355,7 +397,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Px-sB-z0K">
-                                            <rect key="frame" x="28" y="12" width="316" height="20.5"/>
+                                            <rect key="frame" x="28" y="12" width="316" height="27"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -375,7 +417,7 @@
                                         <constraint firstAttribute="trailing" secondItem="jGp-BO-MMu" secondAttribute="trailing" constant="16" id="ibo-wk-Rqz"/>
                                         <constraint firstItem="2Px-sB-z0K" firstAttribute="leading" secondItem="zvQ-eT-ikK" secondAttribute="leadingMargin" constant="8" id="pVx-ZV-9tA"/>
                                         <constraint firstItem="jGp-BO-MMu" firstAttribute="top" secondItem="zvQ-eT-ikK" secondAttribute="topMargin" id="xLZ-87-uQH"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="jGp-BO-MMu" secondAttribute="bottom" id="y2F-TY-l7U"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="jGp-BO-MMu" secondAttribute="bottom" priority="999" id="y2F-TY-l7U"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -405,7 +447,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArO-9D-kHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3444" y="-560.86956521739137"/>
+            <point key="canvasLocation" x="3443.4782608695655" y="-561.16071428571422"/>
         </scene>
         <!--Available Group Table View Controller-->
         <scene sceneID="FhK-VM-Z52">
@@ -464,19 +506,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zEZ-2G-7Jo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="29e-WM-tZ4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="4274" y="-708"/>
+            <point key="canvasLocation" x="4293" y="-560"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Tsh-2E-qXO">
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="3UH-qc-Lwm" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="GVH-Ev-gGJ"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vlb-q7-O5W">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="e8G-du-6cx" kind="relationship" relationship="viewControllers" id="nGt-OY-eIc"/>
                         <segue destination="yR8-EB-dcE" kind="relationship" relationship="viewControllers" id="X0L-yh-tkC"/>
                         <segue destination="NXW-7d-XQL" kind="relationship" relationship="viewControllers" id="rH1-c8-CSg"/>
                     </connections>
@@ -504,10 +548,30 @@
             </objects>
             <point key="canvasLocation" x="2505" y="-560"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="yfq-VC-w8V">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e8G-du-6cx" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newsTab" selectedImage="newsTab" id="cAy-sq-Ztd"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5w8-7u-x6E">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="rIX-Sq-MwG" kind="relationship" relationship="rootViewController" id="nyl-bn-aSi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CPp-WQ-h31" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2504" y="830"/>
+        </scene>
     </scenes>
     <resources>
         <image name="friendTab" width="24" height="24"/>
         <image name="groupsTab" width="18" height="18"/>
+        <image name="newsTab" width="18.399999618530273" height="18.399999618530273"/>
         <image name="vk-512" width="512" height="512"/>
     </resources>
 </document>

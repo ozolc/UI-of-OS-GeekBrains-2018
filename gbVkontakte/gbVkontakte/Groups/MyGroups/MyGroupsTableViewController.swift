@@ -91,13 +91,9 @@ class MyGroupsTableViewController: UITableViewController {
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
 //        if segue.identifier == "addGroup" {
-            print("addGroup")
             let availableGroupController = segue.source as! AvailableGroupTableViewController
             if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
                 let group = availableGroups[indexPath.row]
-                
-                print("group = \(group)")
-                
                 if !myGroups.contains(group) {
                     myGroups.append(group)
                     myGroups.sort()
