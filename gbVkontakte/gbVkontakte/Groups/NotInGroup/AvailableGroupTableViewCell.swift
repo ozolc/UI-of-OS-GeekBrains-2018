@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NotInGroupTableViewCell: UITableViewCell {
+class AvailableGroupTableViewCell: UITableViewCell {
 
     @IBOutlet weak var NotInGroupLabel: UILabel!
     @IBOutlet weak var NotInGroupImageView: UIImageView!
