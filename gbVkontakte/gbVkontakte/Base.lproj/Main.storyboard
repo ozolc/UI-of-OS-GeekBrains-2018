@@ -164,26 +164,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="302" id="KgS-xk-fkk" customClass="NewsTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="302"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="NewsCell" rowHeight="401" id="KgS-xk-fkk" customClass="NewsTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="401"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KgS-xk-fkk" id="Pyh-qb-AzX">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="301.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="400.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Заголовок новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u8-0u-ApQ">
-                                            <rect key="frame" x="4" y="4" width="406" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Заголовок новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u8-0u-ApQ">
+                                            <rect key="frame" x="24" y="15" width="366" height="23"/>
+                                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-Uf-aJr">
+                                            <rect key="frame" x="0.0" y="42" width="414" height="320"/>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aaE-M1-8hC">
+                                            <rect key="frame" x="20" y="366" width="374" height="24"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="share" translatesAutoresizingMaskIntoConstraints="NO" id="N76-hI-qDh">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="24"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="1" green="1" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="tzE-XV-e8Q"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leading" constant="4" id="CCi-h8-Ry0"/>
-                                        <constraint firstAttribute="trailing" secondItem="5u8-0u-ApQ" secondAttribute="trailing" constant="4" id="nHk-AT-2VP"/>
-                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="top" secondItem="Pyh-qb-AzX" secondAttribute="top" constant="4" id="nL8-uP-j4c"/>
+                                        <constraint firstItem="QPb-Uf-aJr" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leading" id="90Y-nB-8Ak"/>
+                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leadingMargin" constant="4" id="HjQ-ep-ZH7"/>
+                                        <constraint firstItem="5u8-0u-ApQ" firstAttribute="top" secondItem="Pyh-qb-AzX" secondAttribute="topMargin" constant="4" id="Q5T-iL-29E"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aaE-M1-8hC" secondAttribute="bottom" id="W5R-k1-9aN"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="aaE-M1-8hC" secondAttribute="trailing" id="Wrp-dn-Q2L"/>
+                                        <constraint firstItem="aaE-M1-8hC" firstAttribute="top" secondItem="QPb-Uf-aJr" secondAttribute="bottom" constant="4" id="YkT-pS-PYi"/>
+                                        <constraint firstItem="QPb-Uf-aJr" firstAttribute="top" secondItem="5u8-0u-ApQ" secondAttribute="bottom" constant="4" id="d6X-BI-kRt"/>
+                                        <constraint firstAttribute="trailing" secondItem="QPb-Uf-aJr" secondAttribute="trailing" id="k77-CH-yBm"/>
+                                        <constraint firstItem="aaE-M1-8hC" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leadingMargin" id="miC-gI-Tix"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="5u8-0u-ApQ" secondAttribute="trailing" constant="4" id="nMi-27-NZs"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="newsImageView" destination="QPb-Uf-aJr" id="Duh-MO-IFS"/>
+                                    <outlet property="newsTextLabel" destination="5u8-0u-ApQ" id="7hI-ao-TjK"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -572,6 +598,7 @@
         <image name="friendTab" width="24" height="24"/>
         <image name="groupsTab" width="18" height="18"/>
         <image name="newsTab" width="18.399999618530273" height="18.399999618530273"/>
+        <image name="share" width="18.399999618530273" height="18.399999618530273"/>
         <image name="vk-512" width="512" height="512"/>
     </resources>
 </document>

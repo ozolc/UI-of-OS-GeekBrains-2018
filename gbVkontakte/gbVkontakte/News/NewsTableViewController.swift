@@ -31,8 +31,10 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         
-            cell.newsTextLabel.text = newsTexts[indexPath.row]
-        print(newsTexts[indexPath.row])
+        cell.newsTextLabel.text = newsTexts[indexPath.row]
+        cell.newsImageView.image = UIImage(named: newsImages[indexPath.row])
+        tableView.rowHeight = cell.newsTextLabel.frame.size.height + cell.newsImageView.frame.size.height * 1.3
+        
         return cell
     }
 
