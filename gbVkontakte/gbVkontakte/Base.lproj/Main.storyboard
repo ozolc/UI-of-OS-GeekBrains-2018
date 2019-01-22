@@ -247,8 +247,14 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="commentImageView" destination="Abs-20-6Ug" id="Rkb-Il-6cH"/>
+                                    <outlet property="commentLabel" destination="iyf-90-OLy" id="Cz7-5n-yH3"/>
+                                    <outlet property="likeImageView" destination="IH0-gF-Xld" id="gOp-wr-t4B"/>
+                                    <outlet property="likeLabel" destination="0jW-eV-gbu" id="mr1-gY-G8i"/>
                                     <outlet property="newsImageView" destination="QPb-Uf-aJr" id="Duh-MO-IFS"/>
                                     <outlet property="newsTextLabel" destination="5u8-0u-ApQ" id="7hI-ao-TjK"/>
+                                    <outlet property="shareImageView" destination="0PH-E1-zzF" id="A2u-xU-8AW"/>
+                                    <outlet property="shareLabel" destination="vp0-fA-eNJ" id="eCM-Tw-qhY"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
