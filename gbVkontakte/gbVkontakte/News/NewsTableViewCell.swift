@@ -21,6 +21,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var shareLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     
+    @IBOutlet weak var footerStackView: UIStackView!
     
     var likes = 0
     var shares = 0
@@ -81,8 +82,6 @@ class NewsTableViewCell: UITableViewCell {
         }
     }
     
-    
-
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -91,3 +90,5 @@ class NewsTableViewCell: UITableViewCell {
     }
 
 }
+
+

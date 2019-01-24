@@ -202,7 +202,7 @@
         <scene sceneID="X2N-vS-Sdd">
             <objects>
                 <tableViewController id="rIX-Sq-MwG" customClass="NewsTableViewController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BOi-5f-eoT">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="BOi-5f-eoT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -220,8 +220,8 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xPM-qq-bYy">
-                                            <rect key="frame" x="10" y="444.5" width="394" height="38"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xPM-qq-bYy" userLabel="footerStackView">
+                                            <rect key="frame" x="10" y="447.5" width="394" height="29"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-0d-gh5">
                                                     <rect key="frame" x="0.0" y="0.0" width="63" height="29"/>
@@ -296,11 +296,11 @@
                                         </imageView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="xPM-qq-bYy" secondAttribute="bottom" constant="2" id="6Pr-lk-lj7"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xPM-qq-bYy" secondAttribute="bottom" priority="999" constant="5" id="6Pr-lk-lj7"/>
                                         <constraint firstItem="xPM-qq-bYy" firstAttribute="leading" secondItem="Pyh-qb-AzX" secondAttribute="leading" constant="10" id="JLT-30-5SQ"/>
                                         <constraint firstAttribute="trailing" secondItem="5u8-0u-ApQ" secondAttribute="trailing" constant="5" id="KCe-SG-IVJ"/>
                                         <constraint firstAttribute="trailing" secondItem="xPM-qq-bYy" secondAttribute="trailing" constant="10" id="Yjf-nN-6fQ"/>
-                                        <constraint firstItem="xPM-qq-bYy" firstAttribute="top" secondItem="QPb-Uf-aJr" secondAttribute="bottom" constant="2" id="cR9-Vz-zcO"/>
+                                        <constraint firstItem="xPM-qq-bYy" firstAttribute="top" secondItem="QPb-Uf-aJr" secondAttribute="bottom" constant="5" id="cR9-Vz-zcO"/>
                                         <constraint firstAttribute="trailing" secondItem="QPb-Uf-aJr" secondAttribute="trailing" id="hEm-pm-oAj"/>
                                         <constraint firstItem="5u8-0u-ApQ" firstAttribute="top" secondItem="Pyh-qb-AzX" secondAttribute="top" constant="5" id="rmp-hR-Rid"/>
                                         <constraint firstItem="QPb-Uf-aJr" firstAttribute="top" secondItem="5u8-0u-ApQ" secondAttribute="bottom" constant="2" id="stg-mx-yTL"/>
@@ -311,6 +311,7 @@
                                 <connections>
                                     <outlet property="commentImageView" destination="Abs-20-6Ug" id="Rkb-Il-6cH"/>
                                     <outlet property="commentLabel" destination="iyf-90-OLy" id="Cz7-5n-yH3"/>
+                                    <outlet property="footerStackView" destination="xPM-qq-bYy" id="XeM-LQ-mfY"/>
                                     <outlet property="likeImageView" destination="IH0-gF-Xld" id="gOp-wr-t4B"/>
                                     <outlet property="likeLabel" destination="0jW-eV-gbu" id="mr1-gY-G8i"/>
                                     <outlet property="newsImageView" destination="QPb-Uf-aJr" id="Duh-MO-IFS"/>

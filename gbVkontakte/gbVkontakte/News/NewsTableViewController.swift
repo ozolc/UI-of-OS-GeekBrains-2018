@@ -15,6 +15,7 @@ class NewsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
     }
 
     // MARK: - Table view data source
@@ -33,13 +34,17 @@ class NewsTableViewController: UITableViewController {
         
         cell.newsTextLabel.text = newsTexts[indexPath.row]
         cell.newsImageView.image = UIImage(named: newsImages[indexPath.row])
-        tableView.rowHeight = cell.newsTextLabel.frame.size.height + cell.newsImageView.frame.size.height * 1.3
+        //tableView.rowHeight = cell.newsTextLabel.frame.size.height + cell.newsImageView.frame.size.height +  cell.footerStackView.frame.height * 1.9
         
         return cell
     }
+    
+    
     
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)
     }
 
 }
+
+
