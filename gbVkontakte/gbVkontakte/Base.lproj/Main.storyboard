@@ -215,13 +215,13 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Заголовок новости" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u8-0u-ApQ">
-                                            <rect key="frame" x="5" y="5" width="404" height="29"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                            <rect key="frame" x="5" y="5" width="404" height="21.5"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xPM-qq-bYy">
-                                            <rect key="frame" x="10" y="452" width="394" height="30.5"/>
+                                            <rect key="frame" x="10" y="444.5" width="394" height="38"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="eHM-0d-gh5">
                                                     <rect key="frame" x="0.0" y="0.0" width="63" height="29"/>
@@ -289,7 +289,7 @@
                                             </constraints>
                                         </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-Uf-aJr">
-                                            <rect key="frame" x="0.0" y="36" width="414" height="414"/>
+                                            <rect key="frame" x="0.0" y="28.5" width="414" height="414"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="QPb-Uf-aJr" secondAttribute="height" multiplier="1:1" id="dfU-sz-lfD"/>
                                             </constraints>
