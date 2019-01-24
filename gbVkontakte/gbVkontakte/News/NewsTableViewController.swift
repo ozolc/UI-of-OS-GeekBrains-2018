@@ -37,5 +37,9 @@ class NewsTableViewController: UITableViewController {
         
         return cell
     }
+    
+    @IBAction func back() {
+        self.dismiss(animated: true, completion: nil)
+    }
 
 }

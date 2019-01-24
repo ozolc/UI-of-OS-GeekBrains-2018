@@ -17,6 +17,12 @@ class LoginFormController: UIViewController {
     
     @IBOutlet weak var likeView: RatingControl!
     
+    @IBOutlet weak var activityIndicator01: ActivityIndicatorView!
+    @IBOutlet weak var activityIndicator02: ActivityIndicatorView!
+    @IBOutlet weak var activityIndicator03: ActivityIndicatorView!
+    
+    var delay: Double = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +32,35 @@ class LoginFormController: UIViewController {
         // присваиваем его UIScrollView
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
         
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let activityIndicatorArray = [activityIndicator01, activityIndicator02, activityIndicator03]
+        
+        for indicator in activityIndicatorArray {
+            if let localIndicator = indicator {
+                UIView.animate(withDuration: 0.3, delay: 0, options: [.repeat,.autoreverse], animations: {
+                    self.opacityActivityIndicator(localIndicator, delay: CFTimeInterval(self.delay))
+                }, completion: nil)
+            }
+            self.delay += 0.2
+        }
+        self.delay = 0
+    }
+    
+    
+    
+    private func opacityActivityIndicator(_ sender: UIView, delay: CFTimeInterval) {
+        let animation = CABasicAnimation(keyPath: "opacity")
+        animation.beginTime = CACurrentMediaTime() + delay
+        animation.fromValue = 1
+        animation.toValue = 0
+        animation.duration = 0.5
+        animation.fillMode = .removed
+        animation.autoreverses = true
+        animation.repeatCount = .infinity
+        sender.layer.add(animation, forKey: nil)
     }
     
     override func viewWillAppear(_ animated: Bool) {

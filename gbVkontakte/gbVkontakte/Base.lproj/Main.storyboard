@@ -43,19 +43,19 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Логин" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRn-FR-JgG">
-                                        <rect key="frame" x="182.5" y="130" width="49" height="21"/>
+                                        <rect key="frame" x="182.5" y="130" width="49" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lrG-5O-ti2">
-                                        <rect key="frame" x="177.5" y="206" width="59.5" height="21"/>
+                                        <rect key="frame" x="177.5" y="205.5" width="59.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sKi-rS-Bsi">
-                                        <rect key="frame" x="107" y="161" width="200" height="30"/>
+                                        <rect key="frame" x="107" y="160.5" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="5DA-st-y6Q"/>
                                         </constraints>
@@ -64,13 +64,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3uB-f1-Bkw">
-                                        <rect key="frame" x="107" y="237" width="200" height="30"/>
+                                        <rect key="frame" x="107" y="236" width="200" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UL0-kn-zXq">
-                                        <rect key="frame" x="178" y="282" width="58" height="33"/>
+                                        <rect key="frame" x="178" y="281" width="58" height="33"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <state key="normal" title=" Войти ">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,11 +95,38 @@
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="71I-My-bik">
+                                        <rect key="frame" x="127" y="339" width="160" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-aI-rFe" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70564570029999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-cl-OAa" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
+                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70564570029999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
+                                            </view>
+                                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-Q0-xG1" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
+                                                <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                                                <color key="backgroundColor" red="0.0" green="0.70564570029999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstItem="UL0-kn-zXq" firstAttribute="top" secondItem="3uB-f1-Bkw" secondAttribute="bottom" constant="15" id="0Ch-3b-OqJ"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="1uy-pv-rOU"/>
+                                    <constraint firstAttribute="trailing" secondItem="71I-My-bik" secondAttribute="trailing" constant="127" id="2HS-Rh-tXA"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lrG-5O-ti2" secondAttribute="trailing" constant="15" id="3It-Mf-SsU"/>
                                     <constraint firstItem="lRn-FR-JgG" firstAttribute="top" secondItem="RWP-ai-8X0" secondAttribute="bottom" constant="15" id="6P1-fT-iDm"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="6Un-q2-etE"/>
@@ -109,10 +136,13 @@
                                     <constraint firstItem="lrG-5O-ti2" firstAttribute="top" secondItem="sKi-rS-Bsi" secondAttribute="bottom" constant="15" id="HQP-NI-LgZ"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="top" secondItem="lrG-5O-ti2" secondAttribute="bottom" constant="10" id="HUO-Su-9jv"/>
                                     <constraint firstAttribute="trailing" secondItem="0Lj-7e-Ges" secondAttribute="trailing" id="JY7-Ml-NHI"/>
+                                    <constraint firstItem="71I-My-bik" firstAttribute="leading" secondItem="wJg-dv-eiv" secondAttribute="trailing" constant="127" id="JiL-FE-hAy"/>
                                     <constraint firstItem="wJg-dv-eiv" firstAttribute="top" secondItem="0Lj-7e-Ges" secondAttribute="bottom" id="Kkw-Wc-WUr"/>
                                     <constraint firstAttribute="bottom" secondItem="wJg-dv-eiv" secondAttribute="bottom" id="LNr-ha-16L"/>
+                                    <constraint firstItem="71I-My-bik" firstAttribute="top" secondItem="UL0-kn-zXq" secondAttribute="bottom" constant="25" id="LQk-Wc-X1D"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3uB-f1-Bkw" secondAttribute="trailing" constant="15" id="OAc-fO-66K"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RWP-ai-8X0" secondAttribute="trailing" constant="15" id="Ol5-yN-azR"/>
+                                    <constraint firstItem="71I-My-bik" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="PUI-Kl-ftb"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="width" secondItem="sKi-rS-Bsi" secondAttribute="width" id="UsY-iw-56Z"/>
                                     <constraint firstItem="lrG-5O-ti2" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="e5Y-RG-aMN"/>
                                     <constraint firstItem="RWP-ai-8X0" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="gCB-12-XpL"/>
@@ -145,6 +175,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator01" destination="OSL-aI-rFe" id="BQ5-wW-968"/>
+                        <outlet property="activityIndicator02" destination="Shb-cl-OAa" id="g0d-uj-9W1"/>
+                        <outlet property="activityIndicator03" destination="oWd-Q0-xG1" id="wq5-pt-PAv"/>
                         <outlet property="likeView" destination="BMs-It-Smc" id="PgX-b0-DXd"/>
                         <outlet property="loginTextField" destination="sKi-rS-Bsi" id="Gz9-Wc-K1g"/>
                         <outlet property="passwordInputTextField" destination="3uB-f1-Bkw" id="6gE-gu-8Io"/>
@@ -263,7 +296,13 @@
                             <outlet property="delegate" destination="rIX-Sq-MwG" id="yl7-hQ-sHM"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Новости" id="HDQ-WM-l2g"/>
+                    <navigationItem key="navigationItem" title="Новости" id="HDQ-WM-l2g">
+                        <barButtonItem key="leftBarButtonItem" title="Выход" id="CKb-Lt-QLv">
+                            <connections>
+                                <action selector="back" destination="rIX-Sq-MwG" id="9Yb-cg-git"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Znl-gb-g0R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
