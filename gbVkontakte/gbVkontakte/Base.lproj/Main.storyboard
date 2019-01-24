@@ -91,13 +91,13 @@
                                             <segue destination="3UH-qc-Lwm" kind="show" id="GhM-te-z1h"/>
                                         </connections>
                                     </button>
-                                    <view contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-It-Smc" customClass="RatingControl" customModule="gbVkontakte" customModuleProvider="target">
+                                    <view hidden="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-It-Smc" customClass="RatingControl" customModule="gbVkontakte" customModuleProvider="target">
                                         <rect key="frame" x="172" y="592" width="70" height="34"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="71I-My-bik">
-                                        <rect key="frame" x="127" y="339" width="160" height="50"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="71I-My-bik">
+                                        <rect key="frame" x="122" y="329" width="170" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OSL-aI-rFe" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -110,7 +110,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Shb-cl-OAa" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
-                                                <rect key="frame" x="55" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="60" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.70564570029999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -120,7 +120,7 @@
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oWd-Q0-xG1" customClass="ActivityIndicatorView" customModule="gbVkontakte" customModuleProvider="target">
-                                                <rect key="frame" x="110" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="120" y="0.0" width="50" height="50"/>
                                                 <color key="backgroundColor" red="0.0" green="0.70564570029999996" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -136,7 +136,7 @@
                                 <constraints>
                                     <constraint firstItem="UL0-kn-zXq" firstAttribute="top" secondItem="3uB-f1-Bkw" secondAttribute="bottom" constant="15" id="0Ch-3b-OqJ"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="1uy-pv-rOU"/>
-                                    <constraint firstAttribute="trailing" secondItem="71I-My-bik" secondAttribute="trailing" constant="127" id="2HS-Rh-tXA"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="71I-My-bik" secondAttribute="trailing" constant="120" id="2HS-Rh-tXA"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lrG-5O-ti2" secondAttribute="trailing" constant="15" id="3It-Mf-SsU"/>
                                     <constraint firstItem="lRn-FR-JgG" firstAttribute="top" secondItem="RWP-ai-8X0" secondAttribute="bottom" constant="15" id="6P1-fT-iDm"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="6Un-q2-etE"/>
@@ -146,10 +146,10 @@
                                     <constraint firstItem="lrG-5O-ti2" firstAttribute="top" secondItem="sKi-rS-Bsi" secondAttribute="bottom" constant="15" id="HQP-NI-LgZ"/>
                                     <constraint firstItem="3uB-f1-Bkw" firstAttribute="top" secondItem="lrG-5O-ti2" secondAttribute="bottom" constant="10" id="HUO-Su-9jv"/>
                                     <constraint firstAttribute="trailing" secondItem="0Lj-7e-Ges" secondAttribute="trailing" id="JY7-Ml-NHI"/>
-                                    <constraint firstItem="71I-My-bik" firstAttribute="leading" secondItem="wJg-dv-eiv" secondAttribute="trailing" constant="127" id="JiL-FE-hAy"/>
+                                    <constraint firstItem="71I-My-bik" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="wJg-dv-eiv" secondAttribute="trailing" constant="120" id="JiL-FE-hAy"/>
                                     <constraint firstItem="wJg-dv-eiv" firstAttribute="top" secondItem="0Lj-7e-Ges" secondAttribute="bottom" id="Kkw-Wc-WUr"/>
                                     <constraint firstAttribute="bottom" secondItem="wJg-dv-eiv" secondAttribute="bottom" id="LNr-ha-16L"/>
-                                    <constraint firstItem="71I-My-bik" firstAttribute="top" secondItem="UL0-kn-zXq" secondAttribute="bottom" constant="25" id="LQk-Wc-X1D"/>
+                                    <constraint firstItem="71I-My-bik" firstAttribute="top" secondItem="UL0-kn-zXq" secondAttribute="bottom" constant="15" id="LQk-Wc-X1D"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3uB-f1-Bkw" secondAttribute="trailing" constant="15" id="OAc-fO-66K"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="RWP-ai-8X0" secondAttribute="trailing" constant="15" id="Ol5-yN-azR"/>
                                     <constraint firstItem="71I-My-bik" firstAttribute="centerX" secondItem="5Ea-cy-37P" secondAttribute="centerX" id="PUI-Kl-ftb"/>
@@ -288,7 +288,7 @@
                                                 <constraint firstItem="Abs-20-6Ug" firstAttribute="height" secondItem="IH0-gF-Xld" secondAttribute="height" id="cOB-Wg-MRK"/>
                                             </constraints>
                                         </stackView>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news01" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-Uf-aJr">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="QPb-Uf-aJr">
                                             <rect key="frame" x="0.0" y="36" width="414" height="414"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="QPb-Uf-aJr" secondAttribute="height" multiplier="1:1" id="dfU-sz-lfD"/>
@@ -713,7 +713,6 @@
         <image name="friendTab" width="24" height="24"/>
         <image name="groupsTab" width="18" height="18"/>
         <image name="like" width="48" height="48"/>
-        <image name="news01" width="750" height="400"/>
         <image name="newsTab" width="18.399999618530273" height="18.399999618530273"/>
         <image name="share" width="48" height="48"/>
         <image name="vk-512" width="512" height="512"/>
