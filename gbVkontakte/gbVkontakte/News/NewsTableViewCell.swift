@@ -70,6 +70,15 @@ class NewsTableViewCell: UITableViewCell {
         case likeImageView:
             self.likes += 1
             likeLabel.text = String(likes)
+            
+            let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
+            
+            rotationAnimation.fromValue = 0.0
+            rotationAnimation.toValue = Float.pi * 2.0
+            rotationAnimation.duration = 2
+            
+            likeImageView.layer.add(rotationAnimation, forKey: nil)
+            
         case shareImageView:
             self.shares += 1
             shareLabel.text = String(shares)
