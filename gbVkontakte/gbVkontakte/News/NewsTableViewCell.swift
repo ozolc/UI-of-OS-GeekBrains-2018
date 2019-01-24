@@ -32,9 +32,33 @@ class NewsTableViewCell: UITableViewCell {
         setupGestureRecognizer(likeImageView)
         setupGestureRecognizer(shareImageView)
         setupGestureRecognizer(commentImageView)
+        setupGestureRecognizer(newsImageView)
     }
     
-    func setupGestureRecognizer(_ localSender: UIImageView) {
+//    @objc func animateImage(_ sender: UIGestureRecognizer) {
+//        switch sender.view {
+//        case newsImageView:
+//            UIView.animate(withDuration:1.0,
+//                           delay: 0,
+//                           options: .curveEaseInOut,
+//                           animations: {
+//                            self.newsImageView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
+//            }) { (success: Bool) in
+//                self.newsImageView.transform = CGAffineTransform.identity
+//            }
+//        default:
+//            print("Not image")
+//        }
+//    }
+    
+//    private func setupGestureRecognizerImageView(_ localSender: UIImageView) {
+//        let gestureTap = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(sender:)))
+//        localSender.isUserInteractionEnabled = true
+//        gestureTap.numberOfTapsRequired = 1
+//        localSender.addGestureRecognizer(gestureTap)
+//    }
+    
+    private func setupGestureRecognizer(_ localSender: UIImageView) {
         let gestureTap = UITapGestureRecognizer(target: self, action: #selector(imageViewTapped(sender:)))
         localSender.isUserInteractionEnabled = true
         gestureTap.numberOfTapsRequired = 1
@@ -52,6 +76,20 @@ class NewsTableViewCell: UITableViewCell {
         case commentImageView:
             self.comments += 1
             commentLabel.text = String(comments)
+        case newsImageView:
+            UIView.animate(withDuration: 1,
+                           delay: 0,
+                           options: .curveEaseInOut,
+                           animations: {
+                            self.newsImageView.transform = CGAffineTransform.init(scaleX: 0.5, y: 0.5)
+            }) { (success: Bool) in
+                UIView.animate(withDuration: 1,
+                               delay: 0,
+                               options: .curveEaseInOut,
+                               animations: {
+                                self.newsImageView.transform = CGAffineTransform.identity
+                })
+            }
         default:
             return
         }
