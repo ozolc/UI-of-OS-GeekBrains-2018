@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD422203262C00F3E1EC /* NavigationController.swift */; };
+		0879BD452203265400F3E1EC /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD442203265400F3E1EC /* PushAnimator.swift */; };
+		0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD462203269E00F3E1EC /* PopAnimator.swift */; };
+		0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD48220326D700F3E1EC /* InteractiveTransition.swift */; };
+		0879BD4B2203293900F3E1EC /* PresentModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD4A2203293900F3E1EC /* PresentModalAnimator.swift */; };
+		0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */; };
 		08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */; };
 		08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FBF21F59FEB0049C5EF /* Groups.swift */; };
 		08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */; };
@@ -34,6 +40,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0879BD422203262C00F3E1EC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		0879BD442203265400F3E1EC /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
+		0879BD462203269E00F3E1EC /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
+		0879BD48220326D700F3E1EC /* InteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
+		0879BD4A2203293900F3E1EC /* PresentModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentModalAnimator.swift; sourceTree = "<group>"; };
+		0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissModalAnimator.swift; sourceTree = "<group>"; };
 		08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		08FD8FBF21F59FEB0049C5EF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
@@ -73,6 +85,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0879BD412203261300F3E1EC /* Transitions */ = {
+			isa = PBXGroup;
+			children = (
+				0879BD422203262C00F3E1EC /* NavigationController.swift */,
+				0879BD442203265400F3E1EC /* PushAnimator.swift */,
+				0879BD462203269E00F3E1EC /* PopAnimator.swift */,
+				0879BD48220326D700F3E1EC /* InteractiveTransition.swift */,
+				0879BD4A2203293900F3E1EC /* PresentModalAnimator.swift */,
+				0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */,
+			);
+			path = Transitions;
+			sourceTree = "<group>";
+		};
 		08FD8FC521F5FDAE0049C5EF /* News */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +136,7 @@
 		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				0879BD412203261300F3E1EC /* Transitions */,
 				08FD8FC521F5FDAE0049C5EF /* News */,
 				B02788CF21F4DE3C0054A3B0 /* Data */,
 				B05F03F321D90039000836E0 /* Helper */,
@@ -256,27 +282,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */,
 				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */,
 				B063473521CC2E6800950FFB /* MyGroupsTableViewController.swift in Sources */,
 				B0FD55A321E3872500B90466 /* OuterView.swift in Sources */,
+				0879BD4B2203293900F3E1EC /* PresentModalAnimator.swift in Sources */,
 				B063473721CC303400950FFB /* FriendsViewController.swift in Sources */,
 				08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */,
 				B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */,
 				08FD8FC921F6015D0049C5EF /* News.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
 				08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */,
+				0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */,
 				08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */,
 				B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */,
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
 				B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */,
 				B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */,
+				0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
 				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
+				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
+				0879BD452203265400F3E1EC /* PushAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

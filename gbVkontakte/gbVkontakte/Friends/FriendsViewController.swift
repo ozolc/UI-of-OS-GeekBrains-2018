@@ -14,6 +14,8 @@ let friends = Friends()
     
     var friendsNames = [String](Friends.allFriends.keys).sorted()
     var searchedNames = [String]()
+    let presentTransition = PresentModalAnimator()
+    let dismissTransition = DismissModalAnimator()
     
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -76,16 +78,6 @@ let friends = Friends()
         // Получаем ячейку из пула
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsTableViewCell
         
-//        if let outerView = cell.outerView {
-//            outerView.clipsToBounds = false
-//            outerView.layer.shadowColor = self.shadowColor.cgColor
-//            outerView.layer.shadowOpacity = self.shadowOpacity
-//            outerView.layer.shadowOffset = self.shadowOffset
-//            outerView.layer.shadowRadius = self.shadowRadius
-//            outerView.backgroundColor = UIColor.clear
-//            outerView.layer.shadowPath = UIBezierPath(roundedRect: outerView.bounds, cornerRadius: outerView.frame.size.width / 2).cgPath
-        
-        
         var filteredFriendsNames = [String]()
         if isFiltering() {
             filteredFriendsNames = filterNames(from: searchedNames, in: indexPath.section)
@@ -106,13 +98,6 @@ let friends = Friends()
         border.addSubview(newFriendAvatar)
         
         return cell
-        
-        // Получаем список друзей для конкретной строки
-//        cell.friendNameLabel.text = friendsNameArray[indexPath.row]
-//        cell.friendImageView.image = friendsImagesArray[indexPath.row]
-//
-//
-//        return cell
     }
     
     override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
@@ -142,13 +127,6 @@ let friends = Friends()
                     friendFotoController.friendImage = image
                 }
             }
-            //            let indexPath = self.tableView.indexPathForSelectedRow {
-            //            let selectedFriendImage = friendsImagesArray[indexPath.row]
-            //            nextScene.friendImage = selectedFriendImage
-            //            let selectedFriendName = friendsNameArray[indexPath.row]
-            //            nextScene.friendName = selectedFriendName
-            
-            
         }
     }
     
@@ -239,5 +217,15 @@ extension FriendsViewController: UISearchResultsUpdating {
     // MARK: - UISearchResultsUpdating Delegate
     func updateSearchResults(for searchController: UISearchController) {
         filterContentForSearchText(searchController.searchBar.text!)
+    }
+}
+
+extension FriendsViewController: UIViewControllerTransitioningDelegate {
+    func animationController(forPresented presented: UIViewController, presenting: UIViewController, source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return presentTransition
+    }
+    
+    func animationController(forDismissed dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
+        return dismissTransition
     }
 }

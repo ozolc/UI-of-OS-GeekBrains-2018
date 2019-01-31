@@ -673,7 +673,7 @@
         <!--Группы-->
         <scene sceneID="5Ui-IE-paW">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NXW-7d-XQL" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NXW-7d-XQL" customClass="NavigationController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Группы" image="groupsTab" id="m8T-Ta-ER6"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qel-W5-tqN">
