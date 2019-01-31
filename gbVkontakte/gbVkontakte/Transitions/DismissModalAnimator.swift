@@ -10,7 +10,7 @@ import UIKit
 
 final class DismissModalAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
-    let duration = 0.8
+    let duration = 1.0
     var presenting = true
     var originFrame = CGRect.zero
     
@@ -22,7 +22,7 @@ final class DismissModalAnimator: NSObject, UIViewControllerAnimatedTransitionin
         
         let containerView = transitionContext.containerView
         
-        _ = transitionContext.view(forKey: .from)!
+//        _ = transitionContext.view(forKey: .from)!
         let toView = transitionContext.view(forKey: .to)!
         
         containerView.addSubview(toView)

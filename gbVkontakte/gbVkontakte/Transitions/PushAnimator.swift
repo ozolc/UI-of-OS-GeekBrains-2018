@@ -25,6 +25,8 @@ final class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         let initialTranslation = CGAffineTransform(translationX: width/2 + height/2, y: -width/2)
         let initialRotation = CGAffineTransform(rotationAngle: -90 * .pi/180)
         
+        transitionContext.containerView.backgroundColor = .white
+        
         transitionContext.containerView.addSubview(destination.view)
         destination.view.frame = source.view.frame
         destination.view.transform = initialRotation.concatenating(initialTranslation)
@@ -33,7 +35,14 @@ final class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
                                 delay: 0,
                                 options: .calculationModePaced,
                                 animations: {
-                                    
+                                    UIView.addKeyframe(withRelativeStartTime: 0,
+                                                       relativeDuration: 0.5,
+                                                       animations: {
+                                                        let translation = CGAffineTransform(translationX: -100 , y: 0)
+                                                        let scale = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                                                        source.view.transform = scale.concatenating(translation)
+                                                        
+                                    })
                                     UIView.addKeyframe(withRelativeStartTime: 0,
                                                        relativeDuration: 0.8,
                                                        animations: {
@@ -50,4 +59,3 @@ final class PushAnimator: NSObject, UIViewControllerAnimatedTransitioning {
         }
     }
 }
-
