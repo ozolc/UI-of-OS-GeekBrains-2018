@@ -674,6 +674,7 @@
         <!--Галерея-->
         <scene sceneID="S93-A3-a2b">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gXT-Vb-SS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="TOM-df-tbG" customClass="AllImageViewController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hk4-0v-1LP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -708,9 +709,8 @@
                         <outlet property="friendImageView" destination="bcv-OG-lOe" id="JbW-3H-VG3"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gXT-Vb-SS0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3416" y="-1223"/>
+            <point key="canvasLocation" x="3415.9420289855075" y="-1223.4375"/>
         </scene>
         <!--Группы-->
         <scene sceneID="5Ui-IE-paW">

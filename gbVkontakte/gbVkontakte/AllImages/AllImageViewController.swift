@@ -64,6 +64,7 @@ class AllImageViewController: UIViewController {
                     index -= 1
                 }
                 friendImageView.image = UIImage(named: imageNames[index])
+                print(imageNames[index])
                 swipeRight()
                 
             default:
@@ -161,7 +162,9 @@ class AllImageViewController: UIViewController {
                 else {return self!.index + 1}
             }
             self!.swImg.image = UIImage(named: self!.imageNames[counter])
-            self!.swImg.transform = .identity})
+            self!.swImg.transform = .identity
+            
+        })
     }
 }
 
