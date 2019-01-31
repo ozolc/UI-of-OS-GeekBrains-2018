@@ -664,11 +664,55 @@
                         <segue destination="e8G-du-6cx" kind="relationship" relationship="viewControllers" id="nGt-OY-eIc"/>
                         <segue destination="yR8-EB-dcE" kind="relationship" relationship="viewControllers" id="X0L-yh-tkC"/>
                         <segue destination="NXW-7d-XQL" kind="relationship" relationship="viewControllers" id="rH1-c8-CSg"/>
+                        <segue destination="hbF-bm-hAC" kind="relationship" relationship="viewControllers" id="x7Q-Gt-Y96"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfs-No-Ybs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1526" y="-209"/>
+        </scene>
+        <!--All Images Table View Controller-->
+        <scene sceneID="0Jj-lQ-3AH">
+            <objects>
+                <tableViewController id="E23-NR-ECS" customClass="AllImagesTableViewController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="aAv-zg-Swn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="AllImagesTableViewCell" id="edm-RP-FPk" customClass="AllImagesTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="edm-RP-FPk" id="whq-ih-jDA">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9XL-Vw-moL">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="9XL-Vw-moL" firstAttribute="leading" secondItem="whq-ih-jDA" secondAttribute="leading" id="8Ar-29-n6s"/>
+                                        <constraint firstItem="9XL-Vw-moL" firstAttribute="top" secondItem="whq-ih-jDA" secondAttribute="top" id="Mva-23-4mr"/>
+                                        <constraint firstAttribute="bottom" secondItem="9XL-Vw-moL" secondAttribute="bottom" id="dhS-ik-Ota"/>
+                                        <constraint firstAttribute="trailing" secondItem="9XL-Vw-moL" secondAttribute="trailing" id="sh8-3r-EyG"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="allImageView" destination="9XL-Vw-moL" id="nsQ-V8-qgI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="E23-NR-ECS" id="7Ld-NB-1fT"/>
+                            <outlet property="delegate" destination="E23-NR-ECS" id="sNt-Vj-bTS"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="6KY-XD-tIb"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="C8y-8T-Rol" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3413.04347826087" y="-1223.4375"/>
         </scene>
         <!--Группы-->
         <scene sceneID="5Ui-IE-paW">
@@ -707,6 +751,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CPp-WQ-h31" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504" y="830"/>
+        </scene>
+        <!--Галерея-->
+        <scene sceneID="2bF-su-5zv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hbF-bm-hAC" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Галерея" id="fye-cU-8k9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LmD-yL-Uhp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E23-NR-ECS" kind="relationship" relationship="rootViewController" id="Lcw-0B-oP7"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4M-JH-uzx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2502.898550724638" y="-1223.4375"/>
         </scene>
     </scenes>
     <resources>
