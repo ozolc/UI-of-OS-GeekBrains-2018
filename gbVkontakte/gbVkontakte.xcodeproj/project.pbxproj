@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0817BDF3220339B000BD1EDB /* AllImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0817BDF2220339B000BD1EDB /* AllImagesTableViewController.swift */; };
-		0817BDF5220339FF00BD1EDB /* AllImagesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0817BDF4220339FF00BD1EDB /* AllImagesTableViewCell.swift */; };
 		0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD422203262C00F3E1EC /* NavigationController.swift */; };
 		0879BD452203265400F3E1EC /* PushAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD442203265400F3E1EC /* PushAnimator.swift */; };
 		0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD462203269E00F3E1EC /* PopAnimator.swift */; };
@@ -36,14 +34,13 @@
 		B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
+		B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */; };
 		B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A021E3668700B90466 /* AvatarImageView.swift */; };
 		B0FD55A321E3872500B90466 /* OuterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A221E3872500B90466 /* OuterView.swift */; };
 		B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A621E38F1300B90466 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0817BDF2220339B000BD1EDB /* AllImagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImagesTableViewController.swift; sourceTree = "<group>"; };
-		0817BDF4220339FF00BD1EDB /* AllImagesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImagesTableViewCell.swift; sourceTree = "<group>"; };
 		0879BD422203262C00F3E1EC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0879BD442203265400F3E1EC /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		0879BD462203269E00F3E1EC /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
@@ -73,6 +70,7 @@
 		B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
+		B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageViewController.swift; sourceTree = "<group>"; };
 		B0FD55A021E3668700B90466 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		B0FD55A221E3872500B90466 /* OuterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterView.swift; sourceTree = "<group>"; };
 		B0FD55A621E38F1300B90466 /* RatingControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
@@ -92,8 +90,7 @@
 		0817BDF12203396B00BD1EDB /* AllImages */ = {
 			isa = PBXGroup;
 			children = (
-				0817BDF2220339B000BD1EDB /* AllImagesTableViewController.swift */,
-				0817BDF4220339FF00BD1EDB /* AllImagesTableViewCell.swift */,
+				B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */,
 			);
 			path = AllImages;
 			sourceTree = "<group>";
@@ -305,14 +302,12 @@
 				0879BD4B2203293900F3E1EC /* PresentModalAnimator.swift in Sources */,
 				B063473721CC303400950FFB /* FriendsViewController.swift in Sources */,
 				08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */,
-				0817BDF5220339FF00BD1EDB /* AllImagesTableViewCell.swift in Sources */,
 				B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */,
 				08FD8FC921F6015D0049C5EF /* News.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
 				08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */,
 				0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */,
 				08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */,
-				0817BDF3220339B000BD1EDB /* AllImagesTableViewController.swift in Sources */,
 				B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */,
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
@@ -320,6 +315,7 @@
 				B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */,
 				0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
+				B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */,
 				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
