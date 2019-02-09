@@ -21,11 +21,13 @@
 		08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC621F5FDCC0049C5EF /* NewsTableViewController.swift */; };
 		08FD8FC921F6015D0049C5EF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC821F6015D0049C5EF /* News.swift */; };
 		08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FCA21F602060049C5EF /* NewsTableViewCell.swift */; };
+		17DF375A384033B129E9793F /* Pods_gbVkontakte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0487C7EF0E1D369C20C123 /* Pods_gbVkontakte.framework */; };
 		B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02788D021F4DE5D0054A3B0 /* Friends.swift */; };
 		B038383221C6A83200750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038383121C6A83200750EBD /* AppDelegate.swift */; };
 		B038383721C6A83200750EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383521C6A83200750EBD /* Main.storyboard */; };
 		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
 		B038384421C6A87500750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038384321C6A87500750EBD /* LoginFormController.swift */; };
+		B038851F220F0D540054A78F /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038851E220F0D540054A78F /* VKLoginController.swift */; };
 		B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */; };
 		B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */; };
 		B063473321CC26A700950FFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473221CC26A700950FFB /* Constants.swift */; };
@@ -42,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		014DC2C799873D4EFBEA74DC /* Pods-gbVkontakte.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gbVkontakte.debug.xcconfig"; path = "Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte.debug.xcconfig"; sourceTree = "<group>"; };
 		0879BD422203262C00F3E1EC /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0879BD442203265400F3E1EC /* PushAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushAnimator.swift; sourceTree = "<group>"; };
 		0879BD462203269E00F3E1EC /* PopAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopAnimator.swift; sourceTree = "<group>"; };
@@ -56,6 +59,8 @@
 		08FD8FC621F5FDCC0049C5EF /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
 		08FD8FC821F6015D0049C5EF /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		08FD8FCA21F602060049C5EF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		66FBDFB091489DAD1C5B88D2 /* Pods-gbVkontakte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gbVkontakte.release.xcconfig"; path = "Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte.release.xcconfig"; sourceTree = "<group>"; };
+		6A0487C7EF0E1D369C20C123 /* Pods_gbVkontakte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gbVkontakte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B02788D021F4DE5D0054A3B0 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B038382E21C6A83200750EBD /* gbVkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gbVkontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038383121C6A83200750EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +68,7 @@
 		B038383B21C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B038383D21C6A83200750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038384321C6A87500750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		B038851E220F0D540054A78F /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		B063473221CC26A700950FFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DF375A384033B129E9793F /* Pods_gbVkontakte.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +126,15 @@
 			path = News;
 			sourceTree = "<group>";
 		};
+		732881E5593E408772A51E11 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				014DC2C799873D4EFBEA74DC /* Pods-gbVkontakte.debug.xcconfig */,
+				66FBDFB091489DAD1C5B88D2 /* Pods-gbVkontakte.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B02788CF21F4DE3C0054A3B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,6 +151,8 @@
 			children = (
 				B038383021C6A83200750EBD /* gbVkontakte */,
 				B038382F21C6A83200750EBD /* Products */,
+				732881E5593E408772A51E11 /* Pods */,
+				B95B329742C4D74AB3A4DE04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -159,6 +177,7 @@
 				B084CE5D21D8A0BE006018A5 /* Groups */,
 				B038383121C6A83200750EBD /* AppDelegate.swift */,
 				B038384321C6A87500750EBD /* LoginFormController.swift */,
+				B038851E220F0D540054A78F /* VKLoginController.swift */,
 				B038383521C6A83200750EBD /* Main.storyboard */,
 				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
 				B038383D21C6A83200750EBD /* Info.plist */,
@@ -225,6 +244,14 @@
 			path = AvailableGroup;
 			sourceTree = "<group>";
 		};
+		B95B329742C4D74AB3A4DE04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A0487C7EF0E1D369C20C123 /* Pods_gbVkontakte.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -232,9 +259,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B038384021C6A83200750EBD /* Build configuration list for PBXNativeTarget "gbVkontakte" */;
 			buildPhases = (
+				68D1136FDCAA93B52BBE6309 /* [CP] Check Pods Manifest.lock */,
 				B038382A21C6A83200750EBD /* Sources */,
 				B038382B21C6A83200750EBD /* Frameworks */,
 				B038382C21C6A83200750EBD /* Resources */,
+				36661F16ED0F7E8EBC6B2F13 /* [CP] Embed Pods Frameworks */,
+				D2C2DBE06C47DD0735159210 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -291,6 +321,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		36661F16ED0F7E8EBC6B2F13 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		68D1136FDCAA93B52BBE6309 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gbVkontakte-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2C2DBE06C47DD0735159210 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B038382A21C6A83200750EBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -312,6 +396,7 @@
 				08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */,
 				0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */,
 				08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */,
+				B038851F220F0D540054A78F /* VKLoginController.swift in Sources */,
 				B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */,
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
@@ -468,15 +553,13 @@
 		};
 		B038384121C6A83200750EBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 014DC2C799873D4EFBEA74DC /* Pods-gbVkontakte.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -486,15 +569,13 @@
 		};
 		B038384221C6A83200750EBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66FBDFB091489DAD1C5B88D2 /* Pods-gbVkontakte.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
