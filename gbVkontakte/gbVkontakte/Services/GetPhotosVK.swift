@@ -11,7 +11,7 @@ import Alamofire
 
 class GetPhotosVK {
     static func sendRequest() {
-        let baseUrl = "https://api.vk.com"
+        let baseUrl = Data.baseUrl
         let path = "/method/photos.getAll"
         let url = baseUrl+path
         

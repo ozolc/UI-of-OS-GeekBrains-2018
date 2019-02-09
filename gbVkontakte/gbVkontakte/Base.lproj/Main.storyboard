@@ -148,6 +148,9 @@
                                                         <real key="value" value="5"/>
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="searchGroupByRequestPressed:" destination="gHm-qj-ny8" eventType="touchUpInside" id="bry-Xd-9DL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -161,6 +164,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fgh-7j-emc"/>
                     </view>
+                    <connections>
+                        <outlet property="searchGroupTextField" destination="LL4-UZ-4rc" id="UGJ-1T-mou"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0L-6s-XFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

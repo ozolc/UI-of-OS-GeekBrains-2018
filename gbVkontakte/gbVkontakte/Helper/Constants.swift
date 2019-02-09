@@ -17,4 +17,5 @@ struct Data {
     static let password = ""
     static let background = UIColor(red: 51/255, green: 51/255, blue: 54/255, alpha: 0)
     static let versionAPI = "5.85"
+    static let baseUrl = "https://api.vk.com"
 }

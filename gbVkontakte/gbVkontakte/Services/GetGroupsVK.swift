@@ -12,7 +12,7 @@ import Alamofire
 class GetGroupsVK {
     static func sendRequest() {
         
-        let baseUrl = "https://api.vk.com"
+        let baseUrl = Data.baseUrl
         let path = "/method/groups.get"
         let url = baseUrl+path
         

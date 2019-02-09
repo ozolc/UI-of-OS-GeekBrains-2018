@@ -12,7 +12,7 @@ import Alamofire
 class GetFriendsVK {
     static func sendRequest() {
         
-        let baseUrl = "https://api.vk.com"
+        let baseUrl = Data.baseUrl
         let path = "/method/friends.get"
         let url = baseUrl+path
         
@@ -29,3 +29,4 @@ class GetFriendsVK {
         }
     }
 }
+
