@@ -9,7 +9,7 @@
 import Foundation
 import Alamofire
 
-class GetAllFriendsVK {
+class GetFriendsVK {
     static func sendRequest() {
         
         let baseUrl = "https://api.vk.com"
@@ -20,8 +20,7 @@ class GetAllFriendsVK {
             "access_token": Session.shared.token,
             "order": "name",
             "fields": "nickname, status",
-            "extended": 1,
-            "v": "5.85"
+            "v": Data.versionAPI
         ]
         
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in

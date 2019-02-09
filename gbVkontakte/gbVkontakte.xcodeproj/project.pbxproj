@@ -30,7 +30,8 @@
 		B038851F220F0D540054A78F /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038851E220F0D540054A78F /* VKLoginController.swift */; };
 		B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388521220F16660054A78F /* GetGroupsVK.swift */; };
 		B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388523220F181B0054A78F /* ActionOnVKController.swift */; };
-		B0388526220F1EFD0054A78F /* GetAllFriendsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */; };
+		B0388526220F1EFD0054A78F /* GetFriendsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388525220F1EFD0054A78F /* GetFriendsVK.swift */; };
+		B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388527220F211C0054A78F /* GetPhotosVK.swift */; };
 		B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */; };
 		B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */; };
 		B063473321CC26A700950FFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473221CC26A700950FFB /* Constants.swift */; };
@@ -74,7 +75,8 @@
 		B038851E220F0D540054A78F /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		B0388521220F16660054A78F /* GetGroupsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsVK.swift; sourceTree = "<group>"; };
 		B0388523220F181B0054A78F /* ActionOnVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnVKController.swift; sourceTree = "<group>"; };
-		B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllFriendsVK.swift; sourceTree = "<group>"; };
+		B0388525220F1EFD0054A78F /* GetFriendsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsVK.swift; sourceTree = "<group>"; };
+		B0388527220F211C0054A78F /* GetPhotosVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosVK.swift; sourceTree = "<group>"; };
 		B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		B063473221CC26A700950FFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -198,7 +200,8 @@
 			isa = PBXGroup;
 			children = (
 				B0388521220F16660054A78F /* GetGroupsVK.swift */,
-				B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */,
+				B0388525220F1EFD0054A78F /* GetFriendsVK.swift */,
+				B0388527220F211C0054A78F /* GetPhotosVK.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -400,7 +403,7 @@
 				0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */,
 				08A9A81F220AD1BF00177622 /* Session.swift in Sources */,
 				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
-				B0388526220F1EFD0054A78F /* GetAllFriendsVK.swift in Sources */,
+				B0388526220F1EFD0054A78F /* GetFriendsVK.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */,
 				B063473521CC2E6800950FFB /* MyGroupsTableViewController.swift in Sources */,
@@ -427,6 +430,7 @@
 				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
 				B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
+				B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
 				0879BD452203265400F3E1EC /* PushAnimator.swift in Sources */,

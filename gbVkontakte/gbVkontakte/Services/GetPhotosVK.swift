@@ -1,5 +1,5 @@
 //
-//  GetGroupsVK.swift
+//  GetPhotosVK.swift
 //  gbVkontakte
 //
 //  Created by Maksim Nosov on 09/02/2019.
@@ -9,22 +9,22 @@
 import Foundation
 import Alamofire
 
-class GetGroupsVK {
+class GetPhotosVK {
     static func sendRequest() {
-        
         let baseUrl = "https://api.vk.com"
-        let path = "/method/groups.get"
+        let path = "/method/photos.getAll"
         let url = baseUrl+path
         
         let params: Parameters = [
             "access_token": Session.shared.token,
-            "extended": 1,
+            "photo_sizes": 1,
+            "no_service_albums": 0,
             "v": Data.versionAPI
         ]
         
         Alamofire.request(url, method: .get, parameters: params).responseJSON { response in
             guard let value = response.value else { return }
-            print("Список ваших групп:\n", value)
+            print("Список ваших фото:\n", value)
         }
         
     }
