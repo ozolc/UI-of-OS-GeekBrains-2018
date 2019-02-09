@@ -66,38 +66,18 @@ extension VKLoginController: WKNavigationDelegate {
                 return dict
         }
         
-        print(params)
-        
         guard let token = params["access_token"], let userId = Int(params["user_id"]!) else {
             decisionHandler(.cancel)
             return
         }
         
         Session.shared.token = token
-        Session.shared.userId = userId
+        Session.shared.userId = userId        
         
-        print(token, userId)
-        loadGroups()
-//        performSegue(withIdentifier: "VKLogin", sender: nil)
+        performSegue(withIdentifier: "VKLogin", sender: nil)
         decisionHandler(.cancel)
     }
     
-    func loadGroups() {
-        
-        let baseUrl = "https://api.vk.com"
-        let path = "/method/groups.get"
-        
-        let params: Parameters = [
-            "access_token" : Session.shared.token,
-            "extended" : 1,
-            "v": "5.85"
-        ]
-        
-        Alamofire.request(baseUrl+path, method: .get, parameters: params).responseJSON { response in
-            guard let value = response.value else { return }
-            
-            print(value)
-        }
-    }
-    
 }
+
+

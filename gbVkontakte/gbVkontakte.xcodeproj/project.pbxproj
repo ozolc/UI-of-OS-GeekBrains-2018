@@ -28,6 +28,9 @@
 		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
 		B038384421C6A87500750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038384321C6A87500750EBD /* LoginFormController.swift */; };
 		B038851F220F0D540054A78F /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038851E220F0D540054A78F /* VKLoginController.swift */; };
+		B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388521220F16660054A78F /* GetGroupsVK.swift */; };
+		B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388523220F181B0054A78F /* ActionOnVKController.swift */; };
+		B0388526220F1EFD0054A78F /* GetAllFriendsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */; };
 		B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */; };
 		B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */; };
 		B063473321CC26A700950FFB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473221CC26A700950FFB /* Constants.swift */; };
@@ -69,6 +72,9 @@
 		B038383D21C6A83200750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038384321C6A87500750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		B038851E220F0D540054A78F /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
+		B0388521220F16660054A78F /* GetGroupsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsVK.swift; sourceTree = "<group>"; };
+		B0388523220F181B0054A78F /* ActionOnVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnVKController.swift; sourceTree = "<group>"; };
+		B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAllFriendsVK.swift; sourceTree = "<group>"; };
 		B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		B063473221CC26A700950FFB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -167,6 +173,7 @@
 		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				B0388520220F163F0054A78F /* Services */,
 				0817BDF12203396B00BD1EDB /* AllImages */,
 				0879BD412203261300F3E1EC /* Transitions */,
 				08FD8FC521F5FDAE0049C5EF /* News */,
@@ -176,6 +183,7 @@
 				B084CE5A21D8A014006018A5 /* Friends */,
 				B084CE5D21D8A0BE006018A5 /* Groups */,
 				B038383121C6A83200750EBD /* AppDelegate.swift */,
+				B0388523220F181B0054A78F /* ActionOnVKController.swift */,
 				B038384321C6A87500750EBD /* LoginFormController.swift */,
 				B038851E220F0D540054A78F /* VKLoginController.swift */,
 				B038383521C6A83200750EBD /* Main.storyboard */,
@@ -184,6 +192,15 @@
 				08FD8FC321F5F6F00049C5EF /* Assets.xcassets */,
 			);
 			path = gbVkontakte;
+			sourceTree = "<group>";
+		};
+		B0388520220F163F0054A78F /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B0388521220F16660054A78F /* GetGroupsVK.swift */,
+				B0388525220F1EFD0054A78F /* GetAllFriendsVK.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		B05F03EE21D8D4C2000836E0 /* Friend */ = {
@@ -383,6 +400,7 @@
 				0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */,
 				08A9A81F220AD1BF00177622 /* Session.swift in Sources */,
 				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
+				B0388526220F1EFD0054A78F /* GetAllFriendsVK.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */,
 				B063473521CC2E6800950FFB /* MyGroupsTableViewController.swift in Sources */,
@@ -401,11 +419,13 @@
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
 				B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */,
+				B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */,
 				B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */,
 				0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
 				B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */,
 				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
+				B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
@@ -559,7 +579,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -575,7 +598,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
