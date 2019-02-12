@@ -40,7 +40,6 @@
 		B063473721CC303400950FFB /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B063473621CC303400950FFB /* FriendsViewController.swift */; };
 		B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */; };
 		B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */; };
-		B0BE3458221331A4009509BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE3457221331A4009509BE /* User.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
 		B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */; };
@@ -87,7 +86,6 @@
 		B063473621CC303400950FFB /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
 		B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
-		B0BE3457221331A4009509BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
 		B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageViewController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 				08FD8FBF21F59FEB0049C5EF /* Groups.swift */,
 				08FD8FC821F6015D0049C5EF /* News.swift */,
 				08A9A81E220AD1BF00177622 /* Session.swift */,
-				B0BE3457221331A4009509BE /* User.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -356,14 +353,10 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -442,7 +435,6 @@
 				B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
 				B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */,
-				B0BE3458221331A4009509BE /* User.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
 				0879BD452203265400F3E1EC /* PushAnimator.swift in Sources */,
@@ -595,7 +587,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -611,7 +606,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;

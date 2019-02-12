@@ -7,7 +7,5 @@ target 'gbVkontakte' do
 
   # Pods for gbVkontakte
   pod 'Alamofire'
-  pod 'SwiftyJSON'
-  pod 'Kingfisher'
 
 end

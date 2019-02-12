@@ -21,8 +21,7 @@ class ActionOnVKController: UIViewController {
     }
     
     @IBAction func getFriendsPressed(_ sender: Any) {
-//        GetFriendsVK.sendRequest()
-        GetFriendsVK.getFriend()
+        GetFriendsVK.sendRequest()
     }
     
     @IBAction func getphotosPressed(_ sender: Any) {
