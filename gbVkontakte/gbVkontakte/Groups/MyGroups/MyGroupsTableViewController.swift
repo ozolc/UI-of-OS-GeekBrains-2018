@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import WebKit
 
 var availableGroups = Groups.allGroups.sorted()
 var myGroups = [String]()
@@ -97,6 +98,7 @@ class MyGroupsTableViewController: UITableViewController {
     }
 
     @IBAction func back() {
+        Data.clearCookies()
         self.dismiss(animated: true, completion: nil)
     }
     

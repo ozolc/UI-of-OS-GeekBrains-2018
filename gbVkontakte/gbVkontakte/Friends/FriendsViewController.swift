@@ -129,6 +129,7 @@ let friends = Friends()
 //    }
     
     @IBAction func back() {
+        Data.clearCookies()
         self.dismiss(animated: true, completion: nil)
     }
     

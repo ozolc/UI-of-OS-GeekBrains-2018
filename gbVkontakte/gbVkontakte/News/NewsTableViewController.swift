@@ -42,6 +42,7 @@ class NewsTableViewController: UITableViewController {
     
     
     @IBAction func back() {
+        Data.clearCookies()
         self.dismiss(animated: true, completion: nil)
     }
 

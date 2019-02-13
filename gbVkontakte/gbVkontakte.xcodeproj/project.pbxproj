@@ -16,6 +16,8 @@
 		08868DF62213ED28004998FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF52213ED28004998FC /* Photo.swift */; };
 		08868DF82213F209004998FC /* VKServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF72213F209004998FC /* VKServices.swift */; };
 		08868DFA2213FF76004998FC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF92213FF76004998FC /* Group.swift */; };
+		08868DFC22143DCA004998FC /* WKWebView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DFB22143DCA004998FC /* WKWebView+Extension.swift */; };
+		08868DFE22143EF3004998FC /* LoginWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */; };
 		08A9A81F220AD1BF00177622 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9A81E220AD1BF00177622 /* Session.swift */; };
 		08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */; };
 		08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FBF21F59FEB0049C5EF /* Groups.swift */; };
@@ -60,6 +62,8 @@
 		08868DF52213ED28004998FC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		08868DF72213F209004998FC /* VKServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServices.swift; sourceTree = "<group>"; };
 		08868DF92213FF76004998FC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		08868DFB22143DCA004998FC /* WKWebView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WKWebView+Extension.swift"; sourceTree = "<group>"; };
+		08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWKWebViewController.swift; sourceTree = "<group>"; };
 		08A9A81E220AD1BF00177622 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		08FD8FBF21F59FEB0049C5EF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
@@ -194,6 +198,7 @@
 				B038383121C6A83200750EBD /* AppDelegate.swift */,
 				B0388523220F181B0054A78F /* ActionOnVKController.swift */,
 				B038384321C6A87500750EBD /* LoginFormController.swift */,
+				08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */,
 				B038851E220F0D540054A78F /* VKLoginController.swift */,
 				B038383521C6A83200750EBD /* Main.storyboard */,
 				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
@@ -228,6 +233,7 @@
 				B0FD55A621E38F1300B90466 /* RatingControl.swift */,
 				08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */,
 				08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */,
+				08868DFB22143DCA004998FC /* WKWebView+Extension.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -416,6 +422,8 @@
 				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */,
+				08868DFC22143DCA004998FC /* WKWebView+Extension.swift in Sources */,
+				08868DFE22143EF3004998FC /* LoginWKWebViewController.swift in Sources */,
 				B038852A220F23A60054A78F /* GetGroupsByRequest.swift in Sources */,
 				B063473521CC2E6800950FFB /* MyGroupsTableViewController.swift in Sources */,
 				B0FD55A321E3872500B90466 /* OuterView.swift in Sources */,

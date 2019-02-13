@@ -56,6 +56,7 @@ class AllImageViewController: UIViewController {
     }
     
     @IBAction func back() {
+        Data.clearCookies()
         self.dismiss(animated: true, completion: nil)
     }
     
