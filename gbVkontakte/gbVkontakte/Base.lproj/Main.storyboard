@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UtS-ND-jQP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cDs-sx-LvU">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vrS-nb-5HA">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
@@ -40,12 +40,12 @@
                     <navigationItem key="navigationItem" id="5pJ-LI-INp"/>
                     <connections>
                         <outlet property="webView" destination="vrS-nb-5HA" id="CzO-Du-lby"/>
-                        <segue destination="gHm-qj-ny8" kind="show" identifier="VKLogin" id="nZk-lv-SA1"/>
+                        <segue destination="3UH-qc-Lwm" kind="show" identifier="VKLogin" id="51F-p1-kkl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tFb-hF-Y0n" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-165" y="595"/>
+            <point key="canvasLocation" x="739" y="-210"/>
         </scene>
         <!--Action OnVK Controller-->
         <scene sceneID="YCH-3b-wZJ">
@@ -56,7 +56,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wpR-9b-peZ">
-                                <rect key="frame" x="157.5" y="365.5" width="99" height="100"/>
+                                <rect key="frame" x="157.5" y="343.5" width="99" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6AN-sI-mfG">
                                         <rect key="frame" x="19" y="0.0" width="61" height="26.5"/>
@@ -127,14 +127,14 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G08-jo-XS2">
-                                <rect key="frame" x="70" y="474.5" width="274" height="1"/>
+                                <rect key="frame" x="70" y="452.5" width="274" height="1"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="85y-5d-QFc"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AmW-ds-JyA">
-                                <rect key="frame" x="78.5" y="484.5" width="257" height="30"/>
+                                <rect key="frame" x="78.5" y="462.5" width="257" height="30"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LL4-UZ-4rc">
                                         <rect key="frame" x="0.0" y="0.0" width="150" height="30"/>
@@ -169,7 +169,7 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vk-512" translatesAutoresizingMaskIntoConstraints="NO" id="ER3-cY-O5Z" userLabel="Logo">
-                                <rect key="frame" x="157" y="108" width="100" height="100"/>
+                                <rect key="frame" x="157" y="64" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="DaK-6Q-fRK"/>
                                     <constraint firstAttribute="height" constant="100" id="P06-OS-xp0"/>
@@ -197,12 +197,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S0L-6s-XFY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="539" y="595"/>
+            <point key="canvasLocation" x="1091" y="587"/>
         </scene>
-        <!--Login Form Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LoginFormController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <viewController id="BYZ-38-t0r" customClass="VKLoginController" customModule="gbVkontakte" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -275,9 +276,6 @@
                                                 <real key="value" value="5"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <segue destination="3UH-qc-Lwm" kind="show" id="GhM-te-z1h"/>
-                                        </connections>
                                     </button>
                                     <view hidden="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BMs-It-Smc" customClass="RatingControl" customModule="gbVkontakte" customModuleProvider="target">
                                         <rect key="frame" x="172" y="592" width="70" height="34"/>
@@ -382,9 +380,8 @@
                         <outlet property="scrollView" destination="5Ea-cy-37P" id="e1Z-GO-AH2"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="711.59420289855075" y="-209.59821428571428"/>
+            <point key="canvasLocation" x="-406" y="-210"/>
         </scene>
         <!--Новости-->
         <scene sceneID="X2N-vS-Sdd">
@@ -956,24 +953,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mYN-f9-MSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2504" y="-1223"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="l69-Uw-uY3">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UtS-ND-jQP" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6fb-Ia-gJg">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="cDs-sx-LvU" kind="relationship" relationship="rootViewController" id="vMg-7f-WIu"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PC6-WH-UGy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-872.46376811594212" y="594.64285714285711"/>
         </scene>
     </scenes>
     <resources>

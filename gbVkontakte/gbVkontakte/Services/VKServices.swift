@@ -22,7 +22,7 @@ class VKServices {
         return manager
     }()
     
-    static func getFriends() {
+    public func getFriends(completion: (([User]?, Error?) -> Void)? = nil) {
         let path = "/method/friends.get"
         let url = Data.baseUrl + path
         
@@ -39,11 +39,10 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let users = json["response"]["items"].arrayValue.map { User(json: $0) }
-                
-                users.forEach { print($0) }
-                
+//                users.forEach { print($0) }
+                completion?(users, nil)
             case .failure(let error):
-                print(error.localizedDescription)
+                completion?(nil, error)
             }
         }
     }

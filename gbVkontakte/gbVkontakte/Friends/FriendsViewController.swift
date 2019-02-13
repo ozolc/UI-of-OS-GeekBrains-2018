@@ -7,10 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 let friends = Friends()
 
 @IBDesignable class FriendsViewController: UITableViewController {
+    
+    private let vkService = VKServices()
+    public var users = [User]()
     
     var friendsNames = [String](Friends.allFriends.keys).sorted()
     var searchedNames = [String]()
@@ -35,12 +39,26 @@ let friends = Friends()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupSearchController()
+//        setupSearchController()
+        
+        vkService.getFriends() { [weak self] users, error in
+            if let error = error {
+                print(error)
+                return
+            } else if let users = users, let self = self {
+                self.users = users
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
     }
     
     // MARK: - Setup a Search Controller
     func setupSearchController() {
-        searchController.searchResultsUpdater = self
+//        searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Names"
         navigationItem.searchController = searchController
@@ -49,53 +67,56 @@ let friends = Friends()
     
     // MARK: - Table view data source
     
-    override func numberOfSections(in tableView: UITableView) -> Int {        
-        if isFiltering() {
-            return firstLetters(in: searchedNames).count
-        } else {
-            return firstLetters(in: friendsNames).count
-            
-        }
-    }
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        if isFiltering() {
+//            return firstLetters(in: searchedNames).count
+//        } else {
+//            return firstLetters(in: friendsNames).count
+//
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if isFiltering() {
-            return filterNames(from: searchedNames, in: section).count
-        } else {
-            return filterNames(from: friendsNames, in: section).count
-        }
+        return users.count
+//        if isFiltering() {
+//            return filterNames(from: searchedNames, in: section).count
+//        } else {
+//            return filterNames(from: friendsNames, in: section).count
+//        }
     }
     
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if isFiltering() {
-            return firstLetters(in: searchedNames)[section]
-        } else {
-            return firstLetters(in: friendsNames)[section]
-        }
-    }
+//    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+//        if isFiltering() {
+//            return firstLetters(in: searchedNames)[section]
+//        } else {
+//            return firstLetters(in: friendsNames)[section]
+//        }
+//    }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // Получаем ячейку из пула
+//        // Получаем ячейку из пула
         let cell = tableView.dequeueReusableCell(withIdentifier: "FriendsCell", for: indexPath) as! FriendsTableViewCell
+//
+//        var filteredFriendsNames = [String]()
+//        if isFiltering() {
+//            filteredFriendsNames = filterNames(from: searchedNames, in: indexPath.section)
+//        } else {filteredFriendsNames = filterNames(from: friendsNames, in: indexPath.section)
+//        }
+//        cell.friendNameLabel.text = filteredFriendsNames[indexPath.row]
         
-        var filteredFriendsNames = [String]()
-        if isFiltering() {
-            filteredFriendsNames = filterNames(from: searchedNames, in: indexPath.section)
-        } else {filteredFriendsNames = filterNames(from: friendsNames, in: indexPath.section)
-        }
-        cell.friendNameLabel.text = filteredFriendsNames[indexPath.row]
+//        let border = UIView()
+//        border.frame = cell.friendImageView.bounds
+//        border.layer.cornerRadius = cell.friendImageView.bounds.height / 2
+//        border.layer.masksToBounds = true
+//        cell.friendImageView.addSubview(border)
+//
+//        let newFriendAvatar = UIImageView()
+//        newFriendAvatar.image = UIImage(named: "\(filteredFriendsNames[indexPath.row])")
+//
+//        newFriendAvatar.frame = border.bounds
+//        border.addSubview(newFriendAvatar)
         
-        let border = UIView()
-        border.frame = cell.friendImageView.bounds
-        border.layer.cornerRadius = cell.friendImageView.bounds.height / 2
-        border.layer.masksToBounds = true
-        cell.friendImageView.addSubview(border)
-        
-        let newFriendAvatar = UIImageView()
-        newFriendAvatar.image = UIImage(named: "\(filteredFriendsNames[indexPath.row])")        
-        
-        newFriendAvatar.frame = border.bounds
-        border.addSubview(newFriendAvatar)
+        cell.configure(with: users[indexPath.row])
         
         return cell
     }
@@ -113,22 +134,36 @@ let friends = Friends()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "friendSeque" {
-            let friendFotoController = segue.destination as! FriendCollectionViewController
-            if let indexPath = self.tableView.indexPathForSelectedRow {
-                var filteredFriendsNames = [String]()
-                if isFiltering() {
-                    filteredFriendsNames = filterNames(from: searchedNames ,in: indexPath.section)
-                } else {
-                    filteredFriendsNames = filterNames(from: friendsNames ,in: indexPath.section)
-                }
-                friendFotoController.friendName = filteredFriendsNames[indexPath.row]
-                if let image = UIImage(named: filteredFriendsNames[indexPath.row]) {
-                    friendFotoController.friendImage = image
-                }
-            }
-        }
+//        let imageView = UIImageView()
+        guard segue.identifier == "friendSeque",
+            let friendFotoController = segue.destination as? FriendCollectionViewController,
+        let row = tableView.indexPathForSelectedRow?.row else { return }
+        
+        friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
+//        if let image = UIImage(named: users[row].avatar) {
+        
+//                friendFotoController.friendImage = image
+//        }
+        
+//        friendImage.kf.setImage(with: URL(string: user.avatar))
     }
+//        friendImageView.kf.setImage(with: URL(string: user.avatar))
+//            if let indexPath = self.tableView.indexPathForSelectedRow?.row {
+            
+                
+//                var filteredFriendsNames = [String]()
+//                if isFiltering() {
+//                    filteredFriendsNames = filterNames(from: searchedNames ,in: indexPath.section)
+//                } else {
+//                    filteredFriendsNames = filterNames(from: friendsNames ,in: indexPath.section)
+//                }
+//                friendFotoController.friendName = filteredFriendsNames[indexPath.row]
+//                if let image = UIImage(named: filteredFriendsNames[indexPath.row]) {
+//                    friendFotoController.friendImage = image
+//                }
+//            }
+//        }
+//    }
     
     func filterNames (from names: [String], in section: Int) -> [String] {
         let key = firstLetters(in: names)[section]

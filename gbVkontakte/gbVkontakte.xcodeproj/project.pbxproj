@@ -31,9 +31,7 @@
 		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
 		B038384421C6A87500750EBD /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038384321C6A87500750EBD /* LoginFormController.swift */; };
 		B038851F220F0D540054A78F /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038851E220F0D540054A78F /* VKLoginController.swift */; };
-		B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388521220F16660054A78F /* GetGroupsVK.swift */; };
 		B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388523220F181B0054A78F /* ActionOnVKController.swift */; };
-		B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388527220F211C0054A78F /* GetPhotosVK.swift */; };
 		B038852A220F23A60054A78F /* GetGroupsByRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388529220F23A60054A78F /* GetGroupsByRequest.swift */; };
 		B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */; };
 		B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */; };
@@ -80,9 +78,7 @@
 		B038383D21C6A83200750EBD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B038384321C6A87500750EBD /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
 		B038851E220F0D540054A78F /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
-		B0388521220F16660054A78F /* GetGroupsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsVK.swift; sourceTree = "<group>"; };
 		B0388523220F181B0054A78F /* ActionOnVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnVKController.swift; sourceTree = "<group>"; };
-		B0388527220F211C0054A78F /* GetPhotosVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosVK.swift; sourceTree = "<group>"; };
 		B0388529220F23A60054A78F /* GetGroupsByRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsByRequest.swift; sourceTree = "<group>"; };
 		B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		B05F03F121D8D4F5000836E0 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -210,8 +206,6 @@
 		B0388520220F163F0054A78F /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B0388521220F16660054A78F /* GetGroupsVK.swift */,
-				B0388527220F211C0054A78F /* GetPhotosVK.swift */,
 				B0388529220F23A60054A78F /* GetGroupsByRequest.swift */,
 				08868DF72213F209004998FC /* VKServices.swift */,
 			);
@@ -447,9 +441,7 @@
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
 				B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */,
 				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
-				B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
-				B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */,
 				B0BE3458221331A4009509BE /* User.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
