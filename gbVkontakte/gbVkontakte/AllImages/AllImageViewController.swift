@@ -7,27 +7,22 @@
 //
 
 import UIKit
+import SwiftyJSON
+import Kingfisher
 
 class AllImageViewController: UIViewController {
     
+    private let vkService = VKServices()
+    public var photos = [Photo]()
+    
     @IBOutlet weak var friendImageView: UIImageView!
     
-    var imageNames = [String](Friends.allFriends.keys)
+//    var imageNames = [String](Friends.allFriends.keys)
     var index = 0
     var swImg = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        swImg.frame = UIScreen.main.bounds
-        swImg.contentMode = .scaleAspectFit
-        swImg.image = UIImage(named: imageNames[index])
-        view.addSubview(swImg)
-        view.backgroundColor = UIColor.darkGray
-        friendImageView.contentMode = .scaleAspectFit
-        friendImageView.backgroundColor = Data.background
-//            UIColor.darkGray
-        
         
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(respondToSwipeGesture))
         swipeRight.direction = UISwipeGestureRecognizer.Direction.right
@@ -38,6 +33,27 @@ class AllImageViewController: UIViewController {
         self.view.addGestureRecognizer(swipeLeft)
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        vkService.getPhotos() { [weak self] photos, error in
+            if let error = error {
+                print(error)
+                return
+            } else if let photos = photos, let self = self {
+                self.photos = photos
+                
+                DispatchQueue.main.async {
+                    self.swImg.frame = UIScreen.main.bounds
+                    self.swImg.contentMode = .scaleAspectFit
+                    self.swImg.kf.setImage(with: URL(string: photos[self.index].url))
+                    self.view.addSubview(self.swImg)
+                    self.view.backgroundColor = UIColor.darkGray
+                    self.friendImageView.contentMode = .scaleAspectFit
+                    self.friendImageView.backgroundColor = Data.background
+                }
+                
+            }
+        }
+    }
     
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)
@@ -49,22 +65,25 @@ class AllImageViewController: UIViewController {
             
             switch swipeGesture.direction {
             case UISwipeGestureRecognizer.Direction.left:
-                if index == imageNames.count - 1 {
+//                if index == imageNames.count - 1 {
+                if index == photos.count - 1 {
                     index = 0
                 } else {
                     index += 1
                 }
-                friendImageView.image = UIImage(named: imageNames[index])
+//                friendImageView.image = UIImage(named: imageNames[index])
+                friendImageView.kf.setImage(with: URL(string: photos[index].url))
                 swipeLeft()
                 
             case UISwipeGestureRecognizer.Direction.right:
                 if index == 0 {
-                    index = imageNames.count - 1
+                    index = photos.count - 1
                 } else {
                     index -= 1
                 }
-                friendImageView.image = UIImage(named: imageNames[index])
-                print(imageNames[index])
+//                friendImageView.image = UIImage(named: imageNames[index])
+                friendImageView.kf.setImage(with: URL(string: photos[index].url))
+//                print(imageNames[index])
                 swipeRight()
                 
             default:
@@ -111,7 +130,8 @@ class AllImageViewController: UIViewController {
                                     })
                                     
         }, completion: {[weak self] finished in
-            self!.swImg.image = UIImage(named: self!.imageNames[self!.index])
+//            self!.swImg.image = UIImage(named: self!.imageNames[self!.index])
+            self!.swImg.kf.setImage(with: URL(string: self!.photos[self!.index].url))
             self!.swImg.transform = .identity})
     }
     
@@ -158,10 +178,11 @@ class AllImageViewController: UIViewController {
                                     
         }, completion: {[weak self] finished in
             var counter: Int {
-                if self!.index == self!.imageNames.count - 1 {return 0}
+                if self!.index == self!.photos.count - 1 {return 0}
                 else {return self!.index + 1}
             }
-            self!.swImg.image = UIImage(named: self!.imageNames[counter])
+            self!.swImg.kf.setImage(with: URL(string: self!.photos[counter].url))
+//            self!.swImg.image = UIImage(named: self!.photos[counter])
             self!.swImg.transform = .identity
             
         })

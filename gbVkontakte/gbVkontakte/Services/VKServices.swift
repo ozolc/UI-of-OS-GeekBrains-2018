@@ -47,7 +47,7 @@ class VKServices {
         }
     }
     
-    static func getPhotos() {
+    public func getPhotos(completion: (([Photo]?, Error?) -> Void)? = nil) {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
         
@@ -64,11 +64,10 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }
-                
-                photos.forEach { print($0) }
-                
+//                photos.forEach { print($0) }
+                completion?(photos, nil)
             case .failure(let error):
-                print(error.localizedDescription)
+                completion?(nil, error)
             }
         }
     }

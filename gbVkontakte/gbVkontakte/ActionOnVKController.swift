@@ -25,7 +25,7 @@ class ActionOnVKController: UIViewController {
     }
     
     @IBAction func getphotosPressed(_ sender: Any) {
-        VKServices.getPhotos()
+//        VKServices.getPhotos()
     }
     
     @IBAction func getGroupsPressed(_ sender: Any) {

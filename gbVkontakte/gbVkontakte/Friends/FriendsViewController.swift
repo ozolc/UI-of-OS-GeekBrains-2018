@@ -121,13 +121,13 @@ let friends = Friends()
         return cell
     }
     
-    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-        if isFiltering() {
-            return firstLetters(in: searchedNames)
-        } else {
-            return firstLetters(in: friendsNames)
-        }
-    }
+//    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+//        if isFiltering() {
+//            return firstLetters(in: searchedNames)
+//        } else {
+//            return firstLetters(in: friendsNames)
+//        }
+//    }
     
     @IBAction func back() {
         self.dismiss(animated: true, completion: nil)
