@@ -13,6 +13,8 @@
 		0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD48220326D700F3E1EC /* InteractiveTransition.swift */; };
 		0879BD4B2203293900F3E1EC /* PresentModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD4A2203293900F3E1EC /* PresentModalAnimator.swift */; };
 		0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */; };
+		08868DF62213ED28004998FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF52213ED28004998FC /* Photo.swift */; };
+		08868DF82213F209004998FC /* VKServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF72213F209004998FC /* VKServices.swift */; };
 		08A9A81F220AD1BF00177622 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9A81E220AD1BF00177622 /* Session.swift */; };
 		08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */; };
 		08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FBF21F59FEB0049C5EF /* Groups.swift */; };
@@ -30,7 +32,6 @@
 		B038851F220F0D540054A78F /* VKLoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038851E220F0D540054A78F /* VKLoginController.swift */; };
 		B0388522220F16660054A78F /* GetGroupsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388521220F16660054A78F /* GetGroupsVK.swift */; };
 		B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388523220F181B0054A78F /* ActionOnVKController.swift */; };
-		B0388526220F1EFD0054A78F /* GetFriendsVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388525220F1EFD0054A78F /* GetFriendsVK.swift */; };
 		B0388528220F211C0054A78F /* GetPhotosVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388527220F211C0054A78F /* GetPhotosVK.swift */; };
 		B038852A220F23A60054A78F /* GetGroupsByRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0388529220F23A60054A78F /* GetGroupsByRequest.swift */; };
 		B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */; };
@@ -57,6 +58,8 @@
 		0879BD48220326D700F3E1EC /* InteractiveTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveTransition.swift; sourceTree = "<group>"; };
 		0879BD4A2203293900F3E1EC /* PresentModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentModalAnimator.swift; sourceTree = "<group>"; };
 		0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissModalAnimator.swift; sourceTree = "<group>"; };
+		08868DF52213ED28004998FC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		08868DF72213F209004998FC /* VKServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServices.swift; sourceTree = "<group>"; };
 		08A9A81E220AD1BF00177622 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		08FD8FBF21F59FEB0049C5EF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
@@ -77,7 +80,6 @@
 		B038851E220F0D540054A78F /* VKLoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKLoginController.swift; sourceTree = "<group>"; };
 		B0388521220F16660054A78F /* GetGroupsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsVK.swift; sourceTree = "<group>"; };
 		B0388523220F181B0054A78F /* ActionOnVKController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionOnVKController.swift; sourceTree = "<group>"; };
-		B0388525220F1EFD0054A78F /* GetFriendsVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetFriendsVK.swift; sourceTree = "<group>"; };
 		B0388527220F211C0054A78F /* GetPhotosVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPhotosVK.swift; sourceTree = "<group>"; };
 		B0388529220F23A60054A78F /* GetGroupsByRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsByRequest.swift; sourceTree = "<group>"; };
 		B05F03EF21D8D4E0000836E0 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				08FD8FC821F6015D0049C5EF /* News.swift */,
 				08A9A81E220AD1BF00177622 /* Session.swift */,
 				B0BE3457221331A4009509BE /* User.swift */,
+				08868DF52213ED28004998FC /* Photo.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -205,9 +208,9 @@
 			isa = PBXGroup;
 			children = (
 				B0388521220F16660054A78F /* GetGroupsVK.swift */,
-				B0388525220F1EFD0054A78F /* GetFriendsVK.swift */,
 				B0388527220F211C0054A78F /* GetPhotosVK.swift */,
 				B0388529220F23A60054A78F /* GetGroupsByRequest.swift */,
+				08868DF72213F209004998FC /* VKServices.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -411,9 +414,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				0879BD432203262C00F3E1EC /* NavigationController.swift in Sources */,
+				08868DF62213ED28004998FC /* Photo.swift in Sources */,
 				08A9A81F220AD1BF00177622 /* Session.swift in Sources */,
 				B0FD55A721E38F1300B90466 /* RatingControl.swift in Sources */,
-				B0388526220F1EFD0054A78F /* GetFriendsVK.swift in Sources */,
 				B05F03F221D8D4F5000836E0 /* FriendCollectionViewCell.swift in Sources */,
 				08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */,
 				B038852A220F23A60054A78F /* GetGroupsByRequest.swift in Sources */,
@@ -423,6 +426,7 @@
 				B063473721CC303400950FFB /* FriendsViewController.swift in Sources */,
 				08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */,
 				B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */,
+				08868DF82213F209004998FC /* VKServices.swift in Sources */,
 				08FD8FC921F6015D0049C5EF /* News.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
 				08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */,
@@ -595,7 +599,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -611,7 +618,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
