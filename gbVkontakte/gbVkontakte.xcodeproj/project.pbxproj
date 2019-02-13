@@ -15,6 +15,7 @@
 		0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */; };
 		08868DF62213ED28004998FC /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF52213ED28004998FC /* Photo.swift */; };
 		08868DF82213F209004998FC /* VKServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF72213F209004998FC /* VKServices.swift */; };
+		08868DFA2213FF76004998FC /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DF92213FF76004998FC /* Group.swift */; };
 		08A9A81F220AD1BF00177622 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9A81E220AD1BF00177622 /* Session.swift */; };
 		08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */; };
 		08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FBF21F59FEB0049C5EF /* Groups.swift */; };
@@ -60,6 +61,7 @@
 		0879BD4C2203295600F3E1EC /* DismissModalAnimator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissModalAnimator.swift; sourceTree = "<group>"; };
 		08868DF52213ED28004998FC /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		08868DF72213F209004998FC /* VKServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VKServices.swift; sourceTree = "<group>"; };
+		08868DF92213FF76004998FC /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		08A9A81E220AD1BF00177622 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
 		08FD8FBF21F59FEB0049C5EF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				08A9A81E220AD1BF00177622 /* Session.swift */,
 				B0BE3457221331A4009509BE /* User.swift */,
 				08868DF52213ED28004998FC /* Photo.swift */,
+				08868DF92213FF76004998FC /* Group.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
 				B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */,
 				B0388524220F181B0054A78F /* ActionOnVKController.swift in Sources */,
+				08868DFA2213FF76004998FC /* Group.swift in Sources */,
 				B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */,
 				0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,

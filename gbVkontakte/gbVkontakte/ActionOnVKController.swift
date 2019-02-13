@@ -29,7 +29,7 @@ class ActionOnVKController: UIViewController {
     }
     
     @IBAction func getGroupsPressed(_ sender: Any) {
-        GetGroupsVK.sendRequest()
+        VKServices.getGroups()
     }
     
     @IBAction func searchGroupByRequestPressed(_ sender: Any) {

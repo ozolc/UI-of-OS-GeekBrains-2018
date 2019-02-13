@@ -73,6 +73,31 @@ class VKServices {
             }
         }
     }
+    
+    static func getGroups() {
+        let path = "/method/groups.get"
+        let url = Data.baseUrl + path
+        
+        let params: Parameters = [
+            "access_token": Session.shared.token,
+            "extended": 1,
+            "v": Data.versionAPI
+        ]
+        
+        VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let groups = json["response"]["items"].arrayValue.map { Group(json: $0) }
+                
+                groups.forEach { print($0) }
+                
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }
 
 //{
