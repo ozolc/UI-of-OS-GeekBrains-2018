@@ -35,7 +35,6 @@ let friends = Friends()
     // Цвет тени
     @IBInspectable var shadowColor: UIColor = UIColor.black
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

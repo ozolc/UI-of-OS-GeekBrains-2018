@@ -715,7 +715,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MyGroupsCell" rowHeight="55" id="hKj-xY-THD" customClass="MyGroupsTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="MyGroupsCell" rowHeight="55" id="hKj-xY-THD" customClass="MyGroupsTableViewCell" customModule="gbVkontakte" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="55"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hKj-xY-THD" id="zvQ-eT-ikK">
@@ -763,7 +763,7 @@
                                 <action selector="back" destination="P2j-0f-ElD" id="3tq-yz-kqU"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="ggV-VV-AO1">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" systemItem="add" id="ggV-VV-AO1">
                             <connections>
                                 <action selector="addGroupWithSegue:" destination="P2j-0f-ElD" id="xUN-cR-xns"/>
                                 <segue destination="QS1-jp-SaF" kind="show" identifier="addGroup" id="MGK-Ip-dXk"/>
@@ -817,7 +817,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="NotInGroupImageView" destination="WYU-v1-HZ8" id="NP3-oH-VoO"/>
+                                    <outlet property="AvailableGroupImageView" destination="WYU-v1-HZ8" id="NP3-oH-VoO"/>
                                     <outlet property="NotInGroupLabel" destination="zTM-xr-aNT" id="EYl-v0-axP"/>
                                     <segue destination="29e-WM-tZ4" kind="unwind" unwindAction="addGroupWithSegue:" id="EZ3-48-hP6"/>
                                 </connections>

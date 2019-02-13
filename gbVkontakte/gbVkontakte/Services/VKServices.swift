@@ -72,7 +72,7 @@ class VKServices {
         }
     }
     
-    static func getGroups() {
+    public func getGroups(completion: (([Group]?, Error?) -> Void)? = nil) {
         let path = "/method/groups.get"
         let url = Data.baseUrl + path
         
@@ -88,31 +88,12 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let groups = json["response"]["items"].arrayValue.map { Group(json: $0) }
-                
-                groups.forEach { print($0) }
+//                groups.forEach { print($0) }
+                completion?(groups, nil)
                 
             case .failure(let error):
-                print(error.localizedDescription)
+                completion?(nil, error)
             }
         }
     }
 }
-
-//{
-//    response =     {
-//        count = 223;
-//        items =         (
-//            {
-//                "album_id" = "-7";
-//                date = 1543944669;
-//                id = 456239685;
-//                "owner_id" = 1805234;
-//                sizes =                 (
-//                    {
-//                        height = 96;
-//                        type = m;
-//                        url = "https://pp.userapi.com/c846121/v846121042/148ecb/G_qmVMAS1z0.jpg";
-//                        width = 130;
-//                }
-//                );
-//                text = "";

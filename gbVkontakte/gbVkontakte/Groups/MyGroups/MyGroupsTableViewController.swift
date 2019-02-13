@@ -13,6 +13,9 @@ var myGroups = [String]()
 
 class MyGroupsTableViewController: UITableViewController {
     
+    private let vkService = VKServices()
+    public var groups = [Group]()
+    
     var searchedGroups = [String]()
     let searchController = UISearchController(searchResultsController: nil)
     
@@ -24,6 +27,20 @@ class MyGroupsTableViewController: UITableViewController {
         super.viewDidLoad()
         
         setupSearchController()
+        
+        vkService.getGroups() { [weak self] groups, error in
+            if let error = error {
+                print(error)
+                return
+            } else if let groups = groups, let self = self {
+                self.groups = groups
+                
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+                
+            }
+        }
     }
     
     // MARK: - Setup a Search Controller
@@ -46,7 +63,7 @@ class MyGroupsTableViewController: UITableViewController {
         if isFiltering() {
             return searchedGroups.count
         }
-        return myGroups.count
+        return groups.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -58,7 +75,7 @@ class MyGroupsTableViewController: UITableViewController {
         if isFiltering() {
             group = searchedGroups[indexPath.row]
         } else {
-            group = myGroups[indexPath.row]
+            group = groups[indexPath.row].name
         }
         
         cell.GroupName.text = group
@@ -72,7 +89,8 @@ class MyGroupsTableViewController: UITableViewController {
         cell.GroupImage.addSubview(border)
 
         let newGroupAvatar = UIImageView()
-        newGroupAvatar.image = UIImage(named: group)
+//        newGroupAvatar.image = UIImage(named: group)
+        newGroupAvatar.kf.setImage(with: URL(string: groups[indexPath.row].photo))
         newGroupAvatar.frame = border.bounds
         border.addSubview(newGroupAvatar)
         return cell

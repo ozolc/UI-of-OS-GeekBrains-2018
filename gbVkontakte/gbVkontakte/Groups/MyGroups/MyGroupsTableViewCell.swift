@@ -23,5 +23,10 @@ class MyGroupsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    public func configure(with group: Group) {
+        GroupName.text = "\(group.name)"
+        GroupImage.kf.setImage(with: URL(string: group.photo))
+    }
 
 }

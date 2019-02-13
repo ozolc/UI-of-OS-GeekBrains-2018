@@ -27,21 +27,3 @@ struct User: Codable, CustomStringConvertible {
 
     }
 }
-
-//Список ваших друзей:
-//{
-//    response =     {
-//        count = 10;
-//        items =         (
-//            {
-//                "first_name" = "\U0410\U043b\U0435\U043a\U0441\U0430\U043d\U0434\U0440";
-//                id = 473700777;
-//                "last_name" = "\U0411\U0430\U0440\U043a\U043e\U0432";
-//                nickname = "";
-//                online = 0;
-//                status = "";
-//            }
-//        );
-//    };
-//}
-
