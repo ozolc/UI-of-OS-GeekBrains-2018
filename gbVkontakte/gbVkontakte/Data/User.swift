@@ -24,6 +24,5 @@ struct User: Codable, CustomStringConvertible {
         self.first_name = json["first_name"].stringValue
         self.last_name = json["last_name"].stringValue
         self.avatar = json["photo_200_orig"].stringValue
-
     }
 }

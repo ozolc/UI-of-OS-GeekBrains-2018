@@ -133,12 +133,17 @@ let friends = Friends()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        let imageView = UIImageView()
+        let imageView = UIImageView()
         guard segue.identifier == "friendSeque",
             let friendFotoController = segue.destination as? FriendCollectionViewController,
         let row = tableView.indexPathForSelectedRow?.row else { return }
         
         friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
+        
+        imageView.kf.setImage(with: URL(string: users[row].avatar))
+        if let image = imageView.image {
+            friendFotoController.friendImage = image
+        }
 //        if let image = UIImage(named: users[row].avatar) {
         
 //                friendFotoController.friendImage = image
