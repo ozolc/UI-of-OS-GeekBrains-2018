@@ -47,7 +47,7 @@ class VKServices {
         }
     }
     
-    public func getPhotos(completion: (([Photo]?, Error?) -> Void)? = nil) {
+    public func getPhotos(for id: Int = Session.shared.userId, completion: (([Photo]?, Error?) -> Void)? = nil) {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
         
@@ -55,6 +55,7 @@ class VKServices {
             "access_token": Session.shared.token,
             "photo_sizes": 1,
             "no_service_albums": 0,
+            "owner_id": id,
             "v": Data.versionAPI
         ]
         

@@ -11,14 +11,16 @@ import SwiftyJSON
 
 struct Photo: Codable, CustomStringConvertible {
     var description: String {
-        return "\(id) \(url)"
+        return "\(id) \(url) \(owner_id)"
     }
     
     let id: Int
     let url: String
+    let owner_id: String
     
     init(json: JSON) {
         self.id = json["id"].intValue
         self.url = json["sizes"][3]["url"].stringValue
+        self.owner_id = json["owner_id"].stringValue
     }
 }

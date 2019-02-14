@@ -10,7 +10,10 @@ import UIKit
 
 class FriendCollectionViewController: UICollectionViewController {
     
-    var friend = ""
+    private let vkService = VKServices()
+    public var photos = [Photo]()
+    
+    var friendID = Session.shared.userId
     
      lazy var friendImage: UIImage = UIImage()
      lazy var friendName: String = String()
@@ -18,7 +21,20 @@ class FriendCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationItem.title = friendName
-        collectionView.reloadData()
+        
+        vkService.getPhotos(for: self.friendID) { [weak self] photos, error in
+            if let error = error {
+                print(error)
+                return
+            } else if let photos = photos, let self = self {
+                self.photos = photos
+                
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+                
+            }
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -33,7 +49,7 @@ class FriendCollectionViewController: UICollectionViewController {
         // #warning Incomplete implementation, return the number of items
 //        let numberOfItems = [String]((Friends.allFriends[friend]?.keys)!).count
 //        return numberOfItems
-        return 1
+        return photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -44,8 +60,9 @@ class FriendCollectionViewController: UICollectionViewController {
         
 //        cell.friendImageView.image = UIImage(named: foto[indexPath.row])
         
-        cell.friendImageView.image = self.friendImage
-        cell.friendNameLabel.text = self.friendName
+//        cell.friendImageView.image = self.friendImage
+//        cell.friendNameLabel.text = self.friendName
+        cell.configure(with: photos[indexPath.row])
     
         return cell
     }

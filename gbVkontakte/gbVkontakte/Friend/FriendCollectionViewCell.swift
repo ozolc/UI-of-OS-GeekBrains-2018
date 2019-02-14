@@ -13,6 +13,8 @@ class FriendCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var friendImageView: UIImageView!
     
-    @IBOutlet weak var friendNameLabel: UILabel!
+    public func configure(with photo: Photo) {
+        friendImageView.kf.setImage(with: URL(string: photo.url))
+    }
     
 }

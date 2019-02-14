@@ -140,7 +140,7 @@ let friends = Friends()
         let row = tableView.indexPathForSelectedRow?.row else { return }
         
         friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
-        
+        friendFotoController.friendID = users[row].id
         imageView.kf.setImage(with: URL(string: users[row].avatar))
         if let image = imageView.image {
             friendFotoController.friendImage = image
