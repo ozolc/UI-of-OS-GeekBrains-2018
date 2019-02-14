@@ -8,6 +8,7 @@
 
 import UIKit
 import WebKit
+import Kingfisher
 
 var availableGroups = Groups.allGroups.sorted()
 var myGroups = [String]()
@@ -17,7 +18,7 @@ class MyGroupsTableViewController: UITableViewController {
     private let vkService = VKServices()
     public var groups = [Group]()
     
-    var searchedGroups = [String]()
+    var searchedGroups = [Group]()
     let searchController = UISearchController(searchResultsController: nil)
     
     lazy var notInGroupsNameArray: [String] = []
@@ -72,28 +73,41 @@ class MyGroupsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyGroupsCell", for: indexPath) as! MyGroupsTableViewCell
         
         let group: String
+        let newImage = UIImageView()
+        let image = newImage.image
         
         if isFiltering() {
-            group = searchedGroups[indexPath.row]
+            group = searchedGroups[indexPath.row].name
+            
+            let url = searchedGroups[indexPath.row].photo
+            if URL(string: url) != nil {
+                let resource = ImageResource(downloadURL: URL(string: url)!, cacheKey: url)
+                newImage.kf.setImage(with: resource)
+            } else {
+                newImage.image = UIImage(named: "placeholder")
+            }
+            
+            cell.GroupImage.kf.setImage(with: URL(string: searchedGroups[indexPath.row].photo))
         } else {
             group = groups[indexPath.row].name
+            cell.GroupImage.kf.setImage(with: URL(string: groups[indexPath.row].photo))
         }
         
         cell.GroupName.text = group
-//        cell.GroupImage.image = UIImage(named: group)
+        
         // Получаем список групп для конкретной строки
         
-        let border = UIView()
-        border.frame = cell.GroupImage.bounds
-        border.layer.cornerRadius = cell.GroupImage.bounds.height / 2
-        border.layer.masksToBounds = true
-        cell.GroupImage.addSubview(border)
+//        let border = UIView()
+//        border.frame = cell.GroupImage.bounds
+//        border.layer.cornerRadius = cell.GroupImage.bounds.height / 2
+//        border.layer.masksToBounds = true
+//        cell.GroupImage.addSubview(border)
 
-        let newGroupAvatar = UIImageView()
-//        newGroupAvatar.image = UIImage(named: group)
-        newGroupAvatar.kf.setImage(with: URL(string: groups[indexPath.row].photo))
-        newGroupAvatar.frame = border.bounds
-        border.addSubview(newGroupAvatar)
+//        let newGroupAvatar = UIImageView()
+////        newGroupAvatar.image = UIImage(named: group)
+//        newGroupAvatar.kf.setImage(with: URL(string: groups[indexPath.row].photo))
+//        newGroupAvatar.frame = border.bounds
+//        border.addSubview(newGroupAvatar)
         return cell
     }
 
@@ -132,7 +146,7 @@ class MyGroupsTableViewController: UITableViewController {
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
         searchedGroups = groups.filter({ (group) -> Bool in
             return group.name.lowercased().contains(searchText.lowercased())
-        }).map { $0.name }
+        })
         tableView.reloadData()
     }
     
