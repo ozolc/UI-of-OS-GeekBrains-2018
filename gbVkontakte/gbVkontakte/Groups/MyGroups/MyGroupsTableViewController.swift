@@ -130,9 +130,9 @@ class MyGroupsTableViewController: UITableViewController {
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-        searchedGroups = myGroups.filter({( group ) -> Bool in
-            return group.lowercased().contains(searchText.lowercased())
-        })
+        searchedGroups = groups.filter({ (group) -> Bool in
+            return group.name.lowercased().contains(searchText.lowercased())
+        }).map { $0.name }
         tableView.reloadData()
     }
     
