@@ -8,17 +8,20 @@
 
 import Foundation
 import SwiftyJSON
+import RealmSwift
 
-struct Group: Codable, CustomStringConvertible {
-    var description: String {
+class Group: Object, Codable {
+    override var description: String {
         return "\(id) \(name) \(photo)"
     }
     
-    let id: Int
-    let name: String
-    let photo: String
+    @objc dynamic var id = 0
+    @objc dynamic var name = ""
+    @objc dynamic var photo = ""
     
-    init(json: JSON) {
+    required convenience init(json: JSON) {
+        self.init()
+        
         self.id = json["id"].intValue
         self.name = json["name"].stringValue
         self.photo = json["photo_200"].stringValue

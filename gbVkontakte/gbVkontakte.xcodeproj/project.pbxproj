@@ -120,6 +120,13 @@
 			path = AllImages;
 			sourceTree = "<group>";
 		};
+		085249D62216B40100B1D78E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Realm;
+			sourceTree = "<group>";
+		};
 		0879BD412203261300F3E1EC /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +193,7 @@
 		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
+				085249D62216B40100B1D78E /* Realm */,
 				B0388520220F163F0054A78F /* Services */,
 				0817BDF12203396B00BD1EDB /* AllImages */,
 				0879BD412203261300F3E1EC /* Transitions */,

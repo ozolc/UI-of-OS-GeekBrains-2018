@@ -9,6 +9,7 @@
 import Foundation
 import Alamofire
 import SwiftyJSON
+import RealmSwift
 
 class VKServices {
     
@@ -95,6 +96,18 @@ class VKServices {
             case .failure(let error):
                 completion?(nil, error)
             }
+        }
+    }
+    
+    // Сохранение данных в Realm
+    private func saveToRealm<T: Object>(_ data: [T]) {
+        do {
+            let realm = try Realm()
+            realm.beginWrite()
+            realm.add(data)
+            try realm.commitWrite()
+        } catch {
+            print(error)
         }
     }
 }

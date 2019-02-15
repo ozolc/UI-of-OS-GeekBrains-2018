@@ -74,7 +74,7 @@ class MyGroupsTableViewController: UITableViewController {
         
         let group: String
         let newImage = UIImageView()
-        let image = newImage.image
+//        let image = newImage.image
         
         if isFiltering() {
             group = searchedGroups[indexPath.row].name
