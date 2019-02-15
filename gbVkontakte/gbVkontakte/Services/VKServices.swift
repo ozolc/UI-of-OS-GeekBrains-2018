@@ -40,7 +40,6 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let users = json["response"]["items"].arrayValue.map { User(json: $0) }
-//                users.forEach { print($0) }
                 completion?(users, nil)
             case .failure(let error):
                 completion?(nil, error)
@@ -66,7 +65,6 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }
-//                photos.forEach { print($0) }
                 completion?(photos, nil)
             case .failure(let error):
                 completion?(nil, error)
@@ -90,7 +88,6 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let groups = json["response"]["items"].arrayValue.map { Group(json: $0) }
-//                groups.forEach { print($0) }
                 completion?(groups, nil)
                 
             case .failure(let error):
