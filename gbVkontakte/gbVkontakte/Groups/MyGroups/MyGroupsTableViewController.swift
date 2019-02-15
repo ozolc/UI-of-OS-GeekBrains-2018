@@ -50,7 +50,7 @@ class MyGroupsTableViewController: UITableViewController {
     func setupSearchController() {
         searchController.searchResultsUpdater = self
         searchController.obscuresBackgroundDuringPresentation = false
-        searchController.searchBar.placeholder = "Search Groups"
+        searchController.searchBar.placeholder = "Поиск групп"
         navigationItem.searchController = searchController
         definesPresentationContext = true
     }
