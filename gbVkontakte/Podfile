@@ -6,7 +6,7 @@ target 'gbVkontakte' do
   use_frameworks!
 
   # Pods for gbVkontakte
-  pod 'Alamofire'
+  pod 'Alamofire', ‘~> 4.8.1’
   pod 'SwiftyJSON'
   pod 'Kingfisher'
   pod 'RealmSwift'
