@@ -65,8 +65,7 @@ class VKServices {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }
-//                photos.forEach { print($0) }
+                let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }.filter { !$0.url.isEmpty }
                 completion?(photos, nil)
             case .failure(let error):
                 completion?(nil, error)

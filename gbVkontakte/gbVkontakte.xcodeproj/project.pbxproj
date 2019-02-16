@@ -120,13 +120,6 @@
 			path = AllImages;
 			sourceTree = "<group>";
 		};
-		085249D62216B40100B1D78E /* Realm */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Realm;
-			sourceTree = "<group>";
-		};
 		0879BD412203261300F3E1EC /* Transitions */ = {
 			isa = PBXGroup;
 			children = (
@@ -193,8 +186,8 @@
 		B038383021C6A83200750EBD /* gbVkontakte */ = {
 			isa = PBXGroup;
 			children = (
-				085249D62216B40100B1D78E /* Realm */,
 				B0388520220F163F0054A78F /* Services */,
+				B0AF6FE8221874DB00ECEAF5 /* Storyboards */,
 				0817BDF12203396B00BD1EDB /* AllImages */,
 				0879BD412203261300F3E1EC /* Transitions */,
 				08FD8FC521F5FDAE0049C5EF /* News */,
@@ -208,8 +201,6 @@
 				B038384321C6A87500750EBD /* LoginFormController.swift */,
 				08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */,
 				B038851E220F0D540054A78F /* VKLoginController.swift */,
-				B038383521C6A83200750EBD /* Main.storyboard */,
-				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
 				B038383D21C6A83200750EBD /* Info.plist */,
 				08FD8FC321F5F6F00049C5EF /* Assets.xcassets */,
 			);
@@ -264,6 +255,15 @@
 				B0D9DA3621D92D2C00B1F574 /* MyGroups */,
 			);
 			path = Groups;
+			sourceTree = "<group>";
+		};
+		B0AF6FE8221874DB00ECEAF5 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B038383521C6A83200750EBD /* Main.storyboard */,
+				B038383A21C6A83200750EBD /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		B0D9DA3621D92D2C00B1F574 /* MyGroups */ = {
