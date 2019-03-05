@@ -79,6 +79,14 @@ class MyGroupsTableViewController: UITableViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.sortGrousList()
+    }
+    
+    private func sortGrousList() {
+        groups = groups!.sorted(byKeyPath: "name", ascending: true)
+    }
+    
     // MARK: - Setup a Search Controller
     
     func setupSearchController() {
