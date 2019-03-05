@@ -10,20 +10,21 @@ import Foundation
 import SwiftyJSON
 import RealmSwift
 
-class Photo: Object, Codable {
-    override var description: String {
-        return "\(id) \(url) \(owner_id)"
-    }
+class Photo: Object {
         
     @objc dynamic var id = 0
     @objc dynamic var url = ""
-    @objc dynamic var owner_id = ""
+    var owner = LinkingObjects(fromType: User.self, property: "photos")
     
     required convenience init(json: JSON) {
         self.init()
         
         self.id = json["id"].intValue
         self.url = json["sizes"][3]["url"].stringValue
-        self.owner_id = json["owner_id"].stringValue
+//        self.owner_id = json["owner_id"].stringValue
+    }
+    
+    override static func primaryKey() -> String {
+        return "id"
     }
 }

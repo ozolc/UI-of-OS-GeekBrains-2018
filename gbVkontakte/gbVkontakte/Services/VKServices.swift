@@ -24,7 +24,7 @@ class VKServices {
     }()
     
     // Получение списка друзей
-    public func getFriends(completion: (([User]?, Error?) -> Void)? = nil) {
+    public func getFriends(photos: [Photo] = [], completion: @escaping ([User]) -> Void) {
         let path = "/method/friends.get"
         let url = Data.baseUrl + path
         
@@ -40,10 +40,11 @@ class VKServices {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let users = json["response"]["items"].arrayValue.map { User(json: $0) }
-                completion?(users, nil)
+                let users = json["response"]["items"].arrayValue.map { User(json: $0, photos: photos) }
+                completion(users)
+                
             case .failure(let error):
-                completion?(nil, error)
+                print(error)
             }
         }
     }

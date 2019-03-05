@@ -8,13 +8,15 @@
 
 import UIKit
 import Kingfisher
+import RealmSwift
 
 let friends = Friends()
 
 @IBDesignable class FriendsViewController: UITableViewController {
     
     private let vkService = VKServices()
-    public var users = [User]()
+    var users: Results<User>?
+    var owner: User?
     
     var friendsNames = [String](Friends.allFriends.keys).sorted()
     var searchedNames = [String]()
@@ -38,22 +40,26 @@ let friends = Friends()
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        setupSearchController()
+        users = RealmProvider.get(User.self)
         
-        vkService.getFriends() { [weak self] users, error in
-            if let error = error {
-                print(error)
-                return
-            } else if let users = users, let self = self {
-                self.users = users
+        vkService.getFriends() { users in
+                RealmProvider.save(items: users)
                 
                 DispatchQueue.main.async {
-                    self.tableView.reloadData()
+                    self.tableView?.reloadData()
                 }
-                
             }
         }
-    }
+        
+//        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+//
+//        do {
+//            let realm = try Realm(configuration: config)
+//            users = realm.objects(User.self)
+//        } catch {
+//            print(error)
+//        }
+//    }
     
     // MARK: - Setup a Search Controller
     func setupSearchController() {
@@ -76,7 +82,7 @@ let friends = Friends()
 //    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return users?.count ?? 0
 //        if isFiltering() {
 //            return filterNames(from: searchedNames, in: section).count
 //        } else {
@@ -115,7 +121,9 @@ let friends = Friends()
 //        newFriendAvatar.frame = border.bounds
 //        border.addSubview(newFriendAvatar)
         
-        cell.configure(with: users[indexPath.row])
+        if let users = users {            
+            cell.configure(with: users[indexPath.row])
+        }
         
         return cell
     }
@@ -139,18 +147,15 @@ let friends = Friends()
             let friendFotoController = segue.destination as? FriendCollectionViewController,
         let row = tableView.indexPathForSelectedRow?.row else { return }
         
-        friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
-        friendFotoController.friendID = users[row].id
-        imageView.kf.setImage(with: URL(string: users[row].avatar))
+        if let users = users {
+            friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
+            friendFotoController.friendID = users[row].id
+            imageView.kf.setImage(with: URL(string: users[row].avatar))
+        }
+        
         if let image = imageView.image {
             friendFotoController.friendImage = image
         }
-//        if let image = UIImage(named: users[row].avatar) {
-        
-//                friendFotoController.friendImage = image
-//        }
-        
-//        friendImage.kf.setImage(with: URL(string: user.avatar))
     }
 //        friendImageView.kf.setImage(with: URL(string: user.avatar))
 //            if let indexPath = self.tableView.indexPathForSelectedRow?.row {
