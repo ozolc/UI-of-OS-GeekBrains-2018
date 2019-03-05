@@ -9,14 +9,16 @@
 import UIKit
 import WebKit
 import Kingfisher
+import RealmSwift
 
 var availableGroups = Groups.allGroups.sorted()
 var myGroups = [String]()
+var filteredGroup = [Group]()
 
 class MyGroupsTableViewController: UITableViewController {
     
     private let vkService = VKServices()
-    public var groups = [Group]()
+    var groups: Results<Group>?
     
     var searchedGroups = [Group]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -30,18 +32,24 @@ class MyGroupsTableViewController: UITableViewController {
         
         setupSearchController()
         
-        vkService.getGroups() { [weak self] groups, error in
-            if let error = error {
-                print(error)
-                return
-            } else if let groups = groups, let self = self {
-                self.groups = groups
-                
+        vkService.getGroups() { [weak self] groups in
+            if let self = self {
+                RealmProvider.save(items: groups)
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-                
+                for group in groups {
+                    myGroups.append(group.name)
+                }
             }
+        }
+        
+        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+        do {
+            let realm = try Realm(configuration: config)
+            self.groups = realm.objects(Group.self)
+        } catch {
+            print(error)
         }
     }
     
@@ -65,7 +73,7 @@ class MyGroupsTableViewController: UITableViewController {
         if isFiltering() {
             return searchedGroups.count
         }
-        return groups.count
+        return groups?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,7 +82,6 @@ class MyGroupsTableViewController: UITableViewController {
         
         let group: String
         let newImage = UIImageView()
-//        let image = newImage.image
         
         if isFiltering() {
             group = searchedGroups[indexPath.row].name
@@ -89,25 +96,12 @@ class MyGroupsTableViewController: UITableViewController {
             
             cell.GroupImage.kf.setImage(with: URL(string: searchedGroups[indexPath.row].photo))
         } else {
-            group = groups[indexPath.row].name
-            cell.GroupImage.kf.setImage(with: URL(string: groups[indexPath.row].photo))
+            group = groups?[indexPath.row].name ?? "Unnamed"
+            cell.GroupImage.kf.setImage(with: URL(string: groups?[indexPath.row].photo ?? ""))
         }
         
         cell.GroupName.text = group
         
-        // Получаем список групп для конкретной строки
-        
-//        let border = UIView()
-//        border.frame = cell.GroupImage.bounds
-//        border.layer.cornerRadius = cell.GroupImage.bounds.height / 2
-//        border.layer.masksToBounds = true
-//        cell.GroupImage.addSubview(border)
-
-//        let newGroupAvatar = UIImageView()
-////        newGroupAvatar.image = UIImage(named: group)
-//        newGroupAvatar.kf.setImage(with: URL(string: groups[indexPath.row].photo))
-//        newGroupAvatar.frame = border.bounds
-//        border.addSubview(newGroupAvatar)
         return cell
     }
 
@@ -124,7 +118,7 @@ class MyGroupsTableViewController: UITableViewController {
     }
     
     @IBAction func addGroup(segue: UIStoryboardSegue) {
-//        if segue.identifier == "addGroup" {
+        
             let availableGroupController = segue.source as! AvailableGroupTableViewController
             if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
                 let group = availableGroups[indexPath.row]
@@ -144,6 +138,7 @@ class MyGroupsTableViewController: UITableViewController {
     }
     
     func filterContentForSearchText(_ searchText: String, scope: String = "All") {
+        guard let groups = groups else { return }
         searchedGroups = groups.filter({ (group) -> Bool in
             return group.name.lowercased().contains(searchText.lowercased())
         })

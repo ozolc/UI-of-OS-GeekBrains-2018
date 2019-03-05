@@ -17,17 +17,13 @@ class AvailableGroupTableViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.title = "Доступные группы"
         
-        vkService.getGroups() { [weak self] groups, error in
-            if let error = error {
-                print(error)
-                return
-            } else if let groups = groups, let self = self {
-                self.groups = groups
-                
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+        vkService.getGroups() { [weak self] groups in
+            if let self = self {
+                RealmProvider.save(items: groups)
+                DispatchQueue.main.sync {
+                    self.tableView?.reloadData()
                 }
-                
+                self.groups = groups
             }
         }
     }

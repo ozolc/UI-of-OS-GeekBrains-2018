@@ -14,6 +14,7 @@ class RealmProvider {
     static func save<T: Object>(items: [T],
                                 config: Realm.Configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true),
                                 update: Bool = true) {
+        print(config.fileURL!)
         
         do {
             let realm = try Realm(configuration: self.deleteIfMigration)

@@ -23,6 +23,7 @@ class VKServices {
         return manager
     }()
     
+    // Получение списка друзей
     public func getFriends(completion: (([User]?, Error?) -> Void)? = nil) {
         let path = "/method/friends.get"
         let url = Data.baseUrl + path
@@ -47,6 +48,7 @@ class VKServices {
         }
     }
     
+    // Получение списка фото
     public func getPhotos(for id: Int = Session.shared.userId, completion: (([Photo]?, Error?) -> Void)? = nil) {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
@@ -72,7 +74,9 @@ class VKServices {
         }
     }
     
-    public func getGroups(completion: (([Group]?, Error?) -> Void)? = nil) {
+    // Получение списка групп
+//    public func getGroups(completion: (([Group]?, Error?) -> Void)? = nil) {
+    public func getGroups(completion: @escaping ([Group]) -> Void) {
         let path = "/method/groups.get"
         let url = Data.baseUrl + path
         
@@ -87,11 +91,13 @@ class VKServices {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let groups = json["response"]["items"].arrayValue.map { Group(json: $0) }
-                completion?(groups, nil)
+                let groups = json["response"]["items"].arrayValue.map { json in
+                    return Group(json: json)
+                }
+                completion(groups)
                 
             case .failure(let error):
-                completion?(nil, error)
+                print(error)
             }
         }
     }

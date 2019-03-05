@@ -28,4 +28,8 @@ class User: Object, Codable {
         self.last_name = json["last_name"].stringValue
         self.avatar = json["photo_200_orig"].stringValue
     }
+    
+    override static func primaryKey() -> String {
+        return "id"
+    }
 }
