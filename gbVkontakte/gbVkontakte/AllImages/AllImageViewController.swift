@@ -33,12 +33,16 @@ class AllImageViewController: UIViewController {
         self.view.addGestureRecognizer(swipeLeft)
     }
     
+//    vkService.getGroups() { [weak self] groups in
+//    if let self = self {
+//    RealmProvider.save(items: groups)
+//    DispatchQueue.main.async {
+//    self.tableView.reloadData()
+//    }
+    
     override func viewWillAppear(_ animated: Bool) {
-        vkService.getPhotos() { [weak self] photos, error in
-            if let error = error {
-                print(error)
-                return
-            } else if let photos = photos, let self = self {
+        vkService.getPhotos(for: Session.shared.userId) { [weak self] photos in
+            if let self = self {
                 self.photos = photos
                 
                 DispatchQueue.main.async {

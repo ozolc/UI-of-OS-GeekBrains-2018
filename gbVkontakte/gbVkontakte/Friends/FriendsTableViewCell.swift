@@ -21,7 +21,7 @@ class FriendsTableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    public func configure(with user: User) {        
+    public func configure(with user: User) {
         friendNameLabel.text = "\(user.first_name) \(user.last_name)"
         friendImageView.kf.setImage(with: URL(string: user.avatar))
     }

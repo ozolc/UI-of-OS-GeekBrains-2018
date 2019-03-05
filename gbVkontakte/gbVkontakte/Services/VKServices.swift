@@ -50,7 +50,8 @@ class VKServices {
     }
     
     // Получение списка фото
-    public func getPhotos(for id: Int = Session.shared.userId, completion: (([Photo]?, Error?) -> Void)? = nil) {
+    public func getPhotos(for id: Int, completion: @escaping ([Photo]) -> Void) {
+//    public func getPhotos(for id: Int = Session.shared.userId, completion: @escaping ([Photo]) -> Void) {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
         
@@ -65,14 +66,30 @@ class VKServices {
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
             
             switch response.result {
+//            case .success(let value):
+//                let json = JSON(value)
+//                let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }.filter { !$0.url.isEmpty }
+//                completion(photos)
+                
             case .success(let value):
                 let json = JSON(value)
-                let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }.filter { !$0.url.isEmpty }
-                completion?(photos, nil)
+                var photos = json["response"]["items"].arrayValue.map { json in
+                    return Photo(json: json)
+                }
+                var sortPhoto: [Photo] = []
+                for photo in photos {
+                    if photo.url != "" {
+                        sortPhoto.append(photo)
+                    }
+                }
+                photos = sortPhoto
+                completion(photos)
+                
             case .failure(let error):
-                completion?(nil, error)
+                print(error)
             }
         }
+
     }
     
     // Получение списка групп

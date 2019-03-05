@@ -142,38 +142,26 @@ let friends = Friends()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let imageView = UIImageView()
+//        let imageView = UIImageView()
         guard segue.identifier == "friendSeque",
             let friendFotoController = segue.destination as? FriendCollectionViewController,
         let row = tableView.indexPathForSelectedRow?.row else { return }
         
         if let users = users {
             friendFotoController.friendName = "\(users[row].first_name) \(users[row].last_name)"
-            friendFotoController.friendID = users[row].id
-            imageView.kf.setImage(with: URL(string: users[row].avatar))
+//            friendFotoController.friendID = users[row].id
+            
+//            ownerId = friendFotoController.users?[row].id ?? 0
+//            fotoFriendsController.ownerId = ownerId
+            
+            friendFotoController.ownerId = users[row].id            
+//            imageView.kf.setImage(with: URL(string: users[row].avatar))
         }
         
-        if let image = imageView.image {
-            friendFotoController.friendImage = image
-        }
-    }
-//        friendImageView.kf.setImage(with: URL(string: user.avatar))
-//            if let indexPath = self.tableView.indexPathForSelectedRow?.row {
-            
-                
-//                var filteredFriendsNames = [String]()
-//                if isFiltering() {
-//                    filteredFriendsNames = filterNames(from: searchedNames ,in: indexPath.section)
-//                } else {
-//                    filteredFriendsNames = filterNames(from: friendsNames ,in: indexPath.section)
-//                }
-//                friendFotoController.friendName = filteredFriendsNames[indexPath.row]
-//                if let image = UIImage(named: filteredFriendsNames[indexPath.row]) {
-//                    friendFotoController.friendImage = image
-//                }
-//            }
+//        if let image = imageView.image {
+//            friendFotoController.friendImage = image
 //        }
-//    }
+    }
     
     func filterNames (from names: [String], in section: Int) -> [String] {
         let key = firstLetters(in: names)[section]

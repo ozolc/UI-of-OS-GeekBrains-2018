@@ -96,7 +96,7 @@ class MyGroupsTableViewController: UITableViewController {
             
             cell.GroupImage.kf.setImage(with: URL(string: searchedGroups[indexPath.row].photo))
         } else {
-            group = groups?[indexPath.row].name ?? "Unnamed"
+            group = groups?[indexPath.row].name ?? "Unknow"
             cell.GroupImage.kf.setImage(with: URL(string: groups?[indexPath.row].photo ?? ""))
         }
         
