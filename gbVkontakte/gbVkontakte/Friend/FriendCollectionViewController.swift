@@ -39,7 +39,6 @@ class FriendCollectionViewController: UICollectionViewController {
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
         do {
             let realm = try Realm(configuration: config)
-            //  guard let user = self.owner else {return}
             photos = realm.objects(Photo.self).filter("ANY owner.id == %@", ownerId)
             
             vkService.getPhotos(for: ownerId) { photos in
@@ -71,7 +70,7 @@ class FriendCollectionViewController: UICollectionViewController {
                     self.collectionView.reloadData()
                 }, completion: nil)
             case .error(let error):
-                fatalError("\(error)")
+                print(error)
             }
         }
     }
@@ -84,10 +83,7 @@ class FriendCollectionViewController: UICollectionViewController {
     }
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-//        let numberOfItems = [String]((Friends.allFriends[friend]?.keys)!).count
-//        return numberOfItems
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {        
         return photos?.count ?? 0
     }
 
