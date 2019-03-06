@@ -9,8 +9,15 @@
 import UIKit
 import WebKit
 import Alamofire
+import FirebaseAuth
+import FirebaseDatabase
 
 class VKLoginController: UIViewController {
+    
+//    private var groups = [FirebaseGroups]()
+    
+    private let vkService = VKServices()
+    private var baseRef: DatabaseReference!
     
     @IBOutlet weak var webView: WKWebView! {
         didSet {
@@ -74,10 +81,47 @@ extension VKLoginController: WKNavigationDelegate {
         Session.shared.token = token
         Session.shared.userId = userId
         
+        Auth.auth().signInAnonymously { (authResult, error) in
+            if let error = error {
+                self.show(error)
+            } else {
+                guard let authResult = authResult else { return }
+                let user = authResult.user
+                let isAnonymous = user.isAnonymous
+                let uid = user.uid
+                print(uid)
+                print(isAnonymous)
+            }
+        }
+        
+        baseRef = Database.database().reference(withPath: "users")
+        addDataToFirebase()
+        
         performSegue(withIdentifier: "VKLogin", sender: nil)
         decisionHandler(.cancel)
     }
     
+    private func addDataToFirebase() {
+        vkService.getGroups() { [unowned self] groups in
+            var groupsFirebaseArray = [FirebaseGroups]()
+            
+            let userId = String(describing: Session.shared.userId)
+            let groupRef = self.baseRef.child(userId.lowercased())
+            
+            // Создание массива с группами
+            for group in groups {
+                let groupFirebase = FirebaseGroups(id: group.id, name: group.name)
+                print(groupFirebase.name)
+                groupsFirebaseArray.append(groupFirebase)
+            }
+            
+            // Добавление названия групп пользователя в разрезе их ID
+            for child in groupsFirebaseArray {
+                let groupId = String(describing: child.id)
+                let groupIDRef = groupRef.child(groupId.lowercased())
+                groupIDRef.setValue(child.toAnyObject())
+            }
+        }
+    }
+    
 }
-
-

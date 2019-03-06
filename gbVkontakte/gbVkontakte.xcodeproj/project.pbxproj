@@ -20,14 +20,12 @@
 		08868DFE22143EF3004998FC /* LoginWKWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */; };
 		08A9A81F220AD1BF00177622 /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A9A81E220AD1BF00177622 /* Session.swift */; };
 		08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */; };
-		08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FBF21F59FEB0049C5EF /* Groups.swift */; };
 		08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */; };
 		08FD8FC421F5F6F00049C5EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 08FD8FC321F5F6F00049C5EF /* Assets.xcassets */; };
 		08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC621F5FDCC0049C5EF /* NewsTableViewController.swift */; };
 		08FD8FC921F6015D0049C5EF /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FC821F6015D0049C5EF /* News.swift */; };
 		08FD8FCB21F602060049C5EF /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FD8FCA21F602060049C5EF /* NewsTableViewCell.swift */; };
 		17DF375A384033B129E9793F /* Pods_gbVkontakte.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0487C7EF0E1D369C20C123 /* Pods_gbVkontakte.framework */; };
-		B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02788D021F4DE5D0054A3B0 /* Friends.swift */; };
 		B038383221C6A83200750EBD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B038383121C6A83200750EBD /* AppDelegate.swift */; };
 		B038383721C6A83200750EBD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383521C6A83200750EBD /* Main.storyboard */; };
 		B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B038383A21C6A83200750EBD /* LaunchScreen.storyboard */; };
@@ -47,6 +45,8 @@
 		B0BE3458221331A4009509BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE3457221331A4009509BE /* User.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
+		B0E51ACC222FF73500B96CF8 /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E51ACB222FF73500B96CF8 /* UIViewController+Ext.swift */; };
+		B0E51ACE222FFD0F00B96CF8 /* FirebaseGroups.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E51ACD222FFD0F00B96CF8 /* FirebaseGroups.swift */; };
 		B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */; };
 		B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A021E3668700B90466 /* AvatarImageView.swift */; };
 		B0FD55A321E3872500B90466 /* OuterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A221E3872500B90466 /* OuterView.swift */; };
@@ -68,7 +68,6 @@
 		08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWKWebViewController.swift; sourceTree = "<group>"; };
 		08A9A81E220AD1BF00177622 /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorView.swift; sourceTree = "<group>"; };
-		08FD8FBF21F59FEB0049C5EF /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
 		08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		08FD8FC321F5F6F00049C5EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		08FD8FC621F5FDCC0049C5EF /* NewsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewController.swift; sourceTree = "<group>"; };
@@ -76,7 +75,6 @@
 		08FD8FCA21F602060049C5EF /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 		66FBDFB091489DAD1C5B88D2 /* Pods-gbVkontakte.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gbVkontakte.release.xcconfig"; path = "Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte.release.xcconfig"; sourceTree = "<group>"; };
 		6A0487C7EF0E1D369C20C123 /* Pods_gbVkontakte.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gbVkontakte.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B02788D021F4DE5D0054A3B0 /* Friends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Friends.swift; sourceTree = "<group>"; };
 		B038382E21C6A83200750EBD /* gbVkontakte.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gbVkontakte.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B038383121C6A83200750EBD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B038383621C6A83200750EBD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,6 +96,8 @@
 		B0BE3457221331A4009509BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
+		B0E51ACB222FF73500B96CF8 /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
+		B0E51ACD222FFD0F00B96CF8 /* FirebaseGroups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseGroups.swift; sourceTree = "<group>"; };
 		B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageViewController.swift; sourceTree = "<group>"; };
 		B0FD55A021E3668700B90466 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		B0FD55A221E3872500B90466 /* OuterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterView.swift; sourceTree = "<group>"; };
@@ -158,13 +158,12 @@
 		B02788CF21F4DE3C0054A3B0 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				B02788D021F4DE5D0054A3B0 /* Friends.swift */,
-				08FD8FBF21F59FEB0049C5EF /* Groups.swift */,
 				08FD8FC821F6015D0049C5EF /* News.swift */,
 				08A9A81E220AD1BF00177622 /* Session.swift */,
 				B0BE3457221331A4009509BE /* User.swift */,
 				08868DF52213ED28004998FC /* Photo.swift */,
 				08868DF92213FF76004998FC /* Group.swift */,
+				B0E51ACD222FFD0F00B96CF8 /* FirebaseGroups.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -239,6 +238,7 @@
 				08FD8FC121F5F4CC0049C5EF /* UIImageView+Extension.swift */,
 				08D3E7F521F9A08400158CE4 /* ActivityIndicatorView.swift */,
 				08868DFB22143DCA004998FC /* WKWebView+Extension.swift */,
+				B0E51ACB222FF73500B96CF8 /* UIViewController+Ext.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -383,6 +383,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -394,6 +395,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,9 +462,9 @@
 				08868DF82213F209004998FC /* VKServices.swift in Sources */,
 				08FD8FC921F6015D0049C5EF /* News.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,
-				08FD8FC021F59FEB0049C5EF /* Groups.swift in Sources */,
 				0879BD49220326D700F3E1EC /* InteractiveTransition.swift in Sources */,
 				08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */,
+				B0E51ACC222FF73500B96CF8 /* UIViewController+Ext.swift in Sources */,
 				B038851F220F0D540054A78F /* VKLoginController.swift in Sources */,
 				B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */,
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
@@ -474,8 +476,8 @@
 				0879BD4D2203295600F3E1EC /* DismissModalAnimator.swift in Sources */,
 				B038384421C6A87500750EBD /* LoginFormController.swift in Sources */,
 				B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */,
-				B02788D121F4DE5D0054A3B0 /* Friends.swift in Sources */,
 				08FD8FC221F5F4CC0049C5EF /* UIImageView+Extension.swift in Sources */,
+				B0E51ACE222FFD0F00B96CF8 /* FirebaseGroups.swift in Sources */,
 				B0BE3458221331A4009509BE /* User.swift in Sources */,
 				B063473321CC26A700950FFB /* Constants.swift in Sources */,
 				0879BD472203269E00F3E1EC /* PopAnimator.swift in Sources */,
