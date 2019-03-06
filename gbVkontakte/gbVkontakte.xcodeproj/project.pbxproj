@@ -43,6 +43,7 @@
 		B0806E20222E4F9100DCC1F3 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0806E1F222E4F9100DCC1F3 /* RealmProvider.swift */; };
 		B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */; };
 		B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */; };
+		B09490E6222FEFD9006BA8A8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B09490E5222FEFD9006BA8A8 /* GoogleService-Info.plist */; };
 		B0BE3458221331A4009509BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE3457221331A4009509BE /* User.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
@@ -93,6 +94,7 @@
 		B0806E1F222E4F9100DCC1F3 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		B09490E5222FEFD9006BA8A8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B0BE3457221331A4009509BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 				08868DFD22143EF3004998FC /* LoginWKWebViewController.swift */,
 				B038851E220F0D540054A78F /* VKLoginController.swift */,
 				B038383D21C6A83200750EBD /* Info.plist */,
+				B09490E5222FEFD9006BA8A8 /* GoogleService-Info.plist */,
 				08FD8FC321F5F6F00049C5EF /* Assets.xcassets */,
 			);
 			path = gbVkontakte;
@@ -357,6 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B038383C21C6A83200750EBD /* LaunchScreen.storyboard in Resources */,
+				B09490E6222FEFD9006BA8A8 /* GoogleService-Info.plist in Resources */,
 				08FD8FC421F5F6F00049C5EF /* Assets.xcassets in Resources */,
 				B038383721C6A83200750EBD /* Main.storyboard in Resources */,
 			);
@@ -373,18 +377,24 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-gbVkontakte/Pods-gbVkontakte-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -619,10 +629,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -638,10 +645,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = RXJ69EWCMT;
 				INFOPLIST_FILE = gbVkontakte/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ozolc.gbVkontakte;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
