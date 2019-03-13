@@ -19,6 +19,7 @@ class MyGroupsTableViewController: UITableViewController {
     
     private let vkService = VKServices()
     var groups: Results<Group>?
+    var notificationToken: NotificationToken?
     
     var searchedGroups = [Group]()
     let searchController = UISearchController(searchResultsController: nil)
@@ -51,6 +52,39 @@ class MyGroupsTableViewController: UITableViewController {
         } catch {
             print(error)
         }
+        
+        // Notifications on Realm database
+        guard let groups = groups else { return }
+        notificationToken = groups.observe { [weak self] changes in
+            guard let self = self else { return }
+            switch changes {
+            case .initial(_):
+                print("Initial")
+//                self.tableView.reloadData()
+            case .update(_, let dels, let ins, let mods):
+                self.tableView.beginUpdates()
+                
+                self.tableView.insertRows(at: ins.map({ IndexPath(row: $0, section: 0) }),
+                                          with: .automatic)
+                self.tableView.deleteRows(at: dels.map({ IndexPath(row: $0, section: 0)}),
+                                          with: .automatic)
+                self.tableView.reloadRows(at: mods.map({ IndexPath(row: $0, section: 0) }),
+                                          with: .automatic)
+                
+                self.tableView.endUpdates()
+                
+            case .error(let error):
+                print(error)
+            }
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.sortGrousList()
+    }
+    
+    private func sortGrousList() {
+        groups = groups!.sorted(byKeyPath: "name", ascending: true)
     }
     
     // MARK: - Setup a Search Controller
