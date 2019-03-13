@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import RealmSwift
 
-let friends = Friends()
+//let friends = Friends()
 
 @IBDesignable class FriendsViewController: UITableViewController {
     
