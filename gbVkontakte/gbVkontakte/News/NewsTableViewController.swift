@@ -10,12 +10,15 @@ import UIKit
 
 class NewsTableViewController: UITableViewController {
     
+    private let vkService = VKServices()
+    
     let newsTexts = [String](News.news.keys)
     let newsImages = [String](News.news.values)
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        vkService.getNews()
     }
 
     // MARK: - Table view data source
