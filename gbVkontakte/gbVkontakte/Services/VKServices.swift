@@ -120,27 +120,45 @@ class VKServices {
     }
     
     // Получение списка новостей
-        public func getNews(completion: @escaping ([Group]) -> Void) {
-//    public func getNews() {
+    public func getNews(completion: @escaping ([Items]) -> Void) {
+        //    public func getNews() {
         let path = "/method/newsfeed.get"
         let url = Data.baseUrl + path
         
         let params: Parameters = [
             "access_token": Session.shared.token,
-            "count": 2,
+            "filters": "post",
+            //            "count": 5,
             "v": Data.versionAPI
         ]
         
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
             
+            //            let json = JSON(value)
+            //            var photos = json["response"]["items"].arrayValue.map { json in
+            //                return Photo(json: json)
+            //            }
+            //            var sortPhoto: [Photo] = []
+            //            for photo in photos {
+            //                if photo.url != "" {
+            //                    sortPhoto.append(photo)
+            //                }
+            //            }
+            //            photos = sortPhoto
+            //            completion(photos)
+            
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-//                print(json)
-                                let groups = json["response"]["items"].arrayValue.map { json in
-                                    return Group(json: json)
-                                }                
-                                completion(groups)
+                print(json)
+                var items = json["response"]["items"].arrayValue.map { json in
+                    return Items(json: json)
+                }
+                
+                for item in items {
+                    items.append(item)
+                }
+                completion(items)
                 
             case .failure(let error):
                 print(error)

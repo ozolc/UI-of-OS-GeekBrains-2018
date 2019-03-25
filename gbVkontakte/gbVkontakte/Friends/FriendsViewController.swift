@@ -10,7 +10,7 @@ import UIKit
 import Kingfisher
 import RealmSwift
 
-let friends = Friends()
+//let friends = Friends()
 
 @IBDesignable class FriendsViewController: UITableViewController {
     
@@ -133,13 +133,6 @@ let friends = Friends()
             // Returns true if the text is empty or nil
             return searchController.searchBar.text?.isEmpty ?? true
         }
-        
-//        func filterContentForSearchText(_ searchText: String, scope: String = "All") {
-//            searchedNames = friendsNames.filter({( name ) -> Bool in
-//                return name.lowercased().contains(searchText.lowercased())
-//            })
-//            tableView.reloadData()
-//        }
         
         func isFiltering() -> Bool {
             return searchController.isActive && !searchBarIsEmpty()

@@ -46,6 +46,7 @@
 		B0BE3458221331A4009509BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE3457221331A4009509BE /* User.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
+		B0F80AEE2247E98A0001D7CC /* Items.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F80AED2247E98A0001D7CC /* Items.swift */; };
 		B0F87FA82203667500DAC6C2 /* AllImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */; };
 		B0FD55A121E3668700B90466 /* AvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A021E3668700B90466 /* AvatarImageView.swift */; };
 		B0FD55A321E3872500B90466 /* OuterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0FD55A221E3872500B90466 /* OuterView.swift */; };
@@ -96,6 +97,7 @@
 		B0BE3457221331A4009509BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
+		B0F80AED2247E98A0001D7CC /* Items.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Items.swift; sourceTree = "<group>"; };
 		B0F87FA72203667500DAC6C2 /* AllImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllImageViewController.swift; sourceTree = "<group>"; };
 		B0FD55A021E3668700B90466 /* AvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarImageView.swift; sourceTree = "<group>"; };
 		B0FD55A221E3872500B90466 /* OuterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OuterView.swift; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				B0BE3457221331A4009509BE /* User.swift */,
 				08868DF52213ED28004998FC /* Photo.swift */,
 				08868DF92213FF76004998FC /* Group.swift */,
+				B0F80AED2247E98A0001D7CC /* Items.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				B063473721CC303400950FFB /* FriendsViewController.swift in Sources */,
 				08D3E7F621F9A08400158CE4 /* ActivityIndicatorView.swift in Sources */,
 				B05F03F021D8D4E0000836E0 /* FriendCollectionViewController.swift in Sources */,
+				B0F80AEE2247E98A0001D7CC /* Items.swift in Sources */,
 				08868DF82213F209004998FC /* VKServices.swift in Sources */,
 				08FD8FC921F6015D0049C5EF /* News.swift in Sources */,
 				B038383221C6A83200750EBD /* AppDelegate.swift in Sources */,

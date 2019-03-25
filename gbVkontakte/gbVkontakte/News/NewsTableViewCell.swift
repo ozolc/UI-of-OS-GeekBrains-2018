@@ -18,13 +18,13 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var commentImageView: UIImageView!
     
     @IBOutlet weak var likeLabel: UILabel!
-    @IBOutlet weak var shareLabel: UILabel!
+    @IBOutlet weak var repostsLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     
     @IBOutlet weak var footerStackView: UIStackView!
     
     var likes = 0
-    var shares = 0
+    var reposts = 0
     var comments = 0
     
     override func awakeFromNib() {
@@ -34,6 +34,19 @@ class NewsTableViewCell: UITableViewCell {
         setupGestureRecognizer(shareImageView)
         setupGestureRecognizer(commentImageView)
         setupGestureRecognizer(newsImageView)
+    }
+    
+    public func configure(with items: Items) {
+        newsTextLabel.text = "\(items.text)"
+        
+        print("reposts - ", items.reposts)
+        print("likes - ", items.likes)
+        print("photos - ", items.photo)
+        likeLabel.text = String(items.likes)
+        repostsLabel.text = String(items.reposts)
+        newsImageView.kf.setImage(with: URL(string: items.photo))
+        
+//        newsImageView.kf.setImage(with: URL(string: group.photo))
     }
     
     private func setupGestureRecognizer(_ localSender: UIImageView) {
@@ -58,8 +71,8 @@ class NewsTableViewCell: UITableViewCell {
             likeImageView.layer.add(rotationAnimation, forKey: nil)
             
         case shareImageView:
-            self.shares += 1
-            shareLabel.text = String(shares)
+            self.reposts += 1
+            repostsLabel.text = String(reposts)
         case commentImageView:
             self.comments += 1
             commentLabel.text = String(comments)
