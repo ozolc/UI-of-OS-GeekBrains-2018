@@ -21,7 +21,7 @@ class NewsTableViewCell: UITableViewCell {
     
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
-    @IBOutlet weak var repostsLabel: UILabel!
+    @IBOutlet weak var shareLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     
     @IBOutlet weak var footerStackView: UIStackView!
@@ -33,10 +33,10 @@ class NewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
      
-//        setupGestureRecognizer(likeImageView)
-//        setupGestureRecognizer(shareImageView)
-//        setupGestureRecognizer(commentImageView)
-//        setupGestureRecognizer(newsImageView)
+        setupGestureRecognizer(likeImageView)
+        setupGestureRecognizer(shareImageView)
+        setupGestureRecognizer(commentImageView)
+        setupGestureRecognizer(newsImageView)
     }
     
     public func configure(with news: News) {
@@ -49,6 +49,10 @@ class NewsTableViewCell: UITableViewCell {
     
         userNameLabel.text = news.titlePostLabel
         newsTextLabel.text = news.postText
+        
+        likeLabel.text = String(news.likesCount)
+        commentLabel.text = String(news.commentsCount)
+        shareLabel.text = String(news.repostsCount)
         
         let date = Date(timeIntervalSince1970: news.titlePostTime)
         let dateFormatter = DateFormatter()
@@ -82,7 +86,7 @@ class NewsTableViewCell: UITableViewCell {
             
         case shareImageView:
             self.reposts += 1
-            repostsLabel.text = String(reposts)
+            shareLabel.text = String(reposts)
         case commentImageView:
             self.comments += 1
             commentLabel.text = String(comments)
