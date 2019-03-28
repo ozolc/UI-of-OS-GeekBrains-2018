@@ -14,6 +14,7 @@ class NewsTableViewController: UITableViewController {
     
     private let vkService = VKServices()
     private var news: Results<News>?
+    private var profile: Results<Profile>?
     private var notificationToken: NotificationToken?
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class NewsTableViewController: UITableViewController {
         
         guard let realm = try? Realm() else { return }
         news = realm.objects(News.self)
+        profile = realm.objects(Profile.self)
         
         vkService.getNews() { news, error in
             if let error = error {
@@ -30,14 +32,12 @@ class NewsTableViewController: UITableViewController {
                 return
             } else if let news = news {
                 RealmProvider.save(items: news)
-//                DispatchQueue.main.async {
-//                    self?.tableView.reloadData()
-//                }
-//                print(news)
-                print(news.count)
             }
         }
         
+//        vkService.getProfile(completion: { profile in
+//            RealmProvider.save(items: profile)
+//        })
     }
     
     // MARK: - Table view data source
@@ -59,7 +59,6 @@ class NewsTableViewController: UITableViewController {
         if let news = news {
             cell.configure(with: news[indexPath.row])
         }
-//        print(news?.count, "No count")
         return cell
     }
     

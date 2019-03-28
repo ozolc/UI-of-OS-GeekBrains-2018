@@ -19,7 +19,8 @@ struct Data {
     static let background = UIColor(red: 51/255, green: 51/255, blue: 54/255, alpha: 0)
     static let versionAPI = "5.85"
     static let baseUrl = "https://api.vk.com"
-    static let clientID = "6853611"
+//    static let clientID = "6853610"
+    static let clientID = "6849043"
     
     static func clearCookies() {
 //        Remove Cookie from HTTPCookieStorage

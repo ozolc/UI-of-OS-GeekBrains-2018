@@ -12,6 +12,8 @@ import Alamofire
 
 class VKLoginController: UIViewController {
     
+    private let vkService = VKServices()
+    
     @IBOutlet weak var webView: WKWebView! {
         didSet {
             webView.navigationDelegate = self
@@ -73,6 +75,10 @@ extension VKLoginController: WKNavigationDelegate {
         
         Session.shared.token = token
         Session.shared.userId = userId
+        
+        vkService.getProfile(completion: { avatar in
+            Session.shared.avatar = avatar
+        })
         
         performSegue(withIdentifier: "VKLogin", sender: nil)
         decisionHandler(.cancel)

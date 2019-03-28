@@ -18,6 +18,9 @@ class News: Object {
     @objc dynamic var geoCoordinates = ""
     @objc dynamic var geoPlaceTitle = ""
     
+//    @objc dynamic var groupName = ""
+//    @objc dynamic var ownerPhoto = ""
+    
     @objc dynamic var postSource_id = 0
     @objc dynamic var postText = ""
     @objc dynamic var attachments_typePhoto: String = ""
@@ -44,6 +47,9 @@ class News: Object {
         self.postSource_id = json["source_id"].intValue
         self.postText = json["text"].stringValue
         self.titlePostTime = json["date"].doubleValue
+        
+//        self.groupName = json["name"].stringValue
+//        self.ownerPhoto = json["photo_50"].stringValue
         
         self.attachments_typePhoto = json["attachments"][0]["photo"]["photo_604"].stringValue
         if !json["attachments"][0]["width"].stringValue.isEmpty {

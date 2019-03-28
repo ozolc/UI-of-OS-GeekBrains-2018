@@ -39,17 +39,15 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     public func configure(with news: News) {
-        let isGroup = news.postSource_id < 0 ? true : false
+//        let isGroup = news.postSource_id < 0 ? true : false
         
-        if isGroup {
+//        if isGroup {
             let urlUserImage = news.titlePostPhoto
             userImageView.kf.setImage(with: URL(string: urlUserImage))
-            
-        }
+//        }
+    
         userNameLabel.text = news.titlePostLabel
         newsTextLabel.text = news.postText
-        
-        
     }
     
     private func setupGestureRecognizer(_ localSender: UIImageView) {

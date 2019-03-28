@@ -43,6 +43,7 @@
 		B0806E20222E4F9100DCC1F3 /* RealmProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0806E1F222E4F9100DCC1F3 /* RealmProvider.swift */; };
 		B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */; };
 		B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */; };
+		B0BD614F224CFDB800878141 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BD614E224CFDB800878141 /* Profile.swift */; };
 		B0BE3458221331A4009509BE /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0BE3457221331A4009509BE /* User.swift */; };
 		B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */; };
 		B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */; };
@@ -94,6 +95,7 @@
 		B0806E1F222E4F9100DCC1F3 /* RealmProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmProvider.swift; sourceTree = "<group>"; };
 		B084CE5B21D8A03E006018A5 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		B084CE5E21D8A0EF006018A5 /* MyGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		B0BD614E224CFDB800878141 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		B0BE3457221331A4009509BE /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B0D9DA3821D92D6B00B1F574 /* AvailableGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewController.swift; sourceTree = "<group>"; };
 		B0D9DA3A21D92D8100B1F574 /* AvailableGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailableGroupTableViewCell.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				B0CB4AC3224CBA8F00145785 /* Legacy */,
 				08A9A81E220AD1BF00177622 /* Session.swift */,
 				B0BE3457221331A4009509BE /* User.swift */,
+				B0BD614E224CFDB800878141 /* Profile.swift */,
 				08868DF52213ED28004998FC /* Photo.swift */,
 				08868DF92213FF76004998FC /* Group.swift */,
 				B0F80AED2247E98A0001D7CC /* News.swift */,
@@ -468,6 +471,7 @@
 				08FD8FC721F5FDCC0049C5EF /* NewsTableViewController.swift in Sources */,
 				B038851F220F0D540054A78F /* VKLoginController.swift in Sources */,
 				B084CE5F21D8A0EF006018A5 /* MyGroupsTableViewCell.swift in Sources */,
+				B0BD614F224CFDB800878141 /* Profile.swift in Sources */,
 				B0D9DA3921D92D6B00B1F574 /* AvailableGroupTableViewController.swift in Sources */,
 				B0D9DA3B21D92D8100B1F574 /* AvailableGroupTableViewCell.swift in Sources */,
 				B084CE5C21D8A03E006018A5 /* FriendsTableViewCell.swift in Sources */,

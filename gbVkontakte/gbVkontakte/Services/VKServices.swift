@@ -49,9 +49,37 @@ class VKServices {
         }
     }
     
+    // Получение данных профиля
+    public func getProfile(for id: String = String(Session.shared.userId), completion: @escaping (String) -> Void) {
+        let path = "/method/users.get"
+        let url = Data.baseUrl + path
+        
+        let params: Parameters = [
+            "access_token": Session.shared.token,
+            "user_ids": id,
+            "fields": "photo_50",
+            "v": Data.versionAPI
+        ]
+        
+        VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
+            
+            switch response.result {
+            case .success(let value):
+                let json = JSON(value)
+                let avatar = json["response"][0]["photo_50"].stringValue
+//                let profile = json["response"].arrayValue.map { json in
+//                    return Profile(json: json) }
+                completion(avatar)
+//                completion(profile, avatar)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
     // Получение списка фото
     public func getPhotos(for id: Int, completion: @escaping ([Photo]) -> Void) {
-        //    public func getPhotos(for id: Int = Session.shared.userId, completion: @escaping ([Photo]) -> Void) {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
         
@@ -145,16 +173,16 @@ class VKServices {
                             }
                         }
                     } else {
+                        
                         for iii in 0..<newsProfiles.count {
                             if news[i].postSource_id == newsProfiles[iii].id {
                                 news[i].titlePostId = newsProfiles[iii].id
                                 news[i].titlePostLabel = newsProfiles[iii].fullName
-                                news[i].titlePostPhoto = newsProfiles[iii].avatar
+                                news[i].titlePostPhoto = newsProfiles[iii].avatar.isEmpty ? Session.shared.avatar : newsProfiles[iii].avatar
                             }
                         }
                     }
                 }
-//                print(news)
                 completion?(news, nil)
             case .failure(let error):
                 completion?(nil, error)
