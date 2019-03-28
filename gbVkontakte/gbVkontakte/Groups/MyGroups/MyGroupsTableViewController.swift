@@ -59,8 +59,7 @@ class MyGroupsTableViewController: UITableViewController {
             guard let self = self else { return }
             switch changes {
             case .initial(_):
-                print("Initial")
-//                self.tableView.reloadData()
+                self.tableView.reloadData()
             case .update(_, let dels, let ins, let mods):
                 self.tableView.beginUpdates()
                 

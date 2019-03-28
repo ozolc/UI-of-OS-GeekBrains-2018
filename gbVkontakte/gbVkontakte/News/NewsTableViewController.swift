@@ -14,17 +14,20 @@ class NewsTableViewController: UITableViewController {
     
     private let vkService = VKServices()
     private var news: Results<News>?
-    private var profile: Results<Profile>?
     private var notificationToken: NotificationToken?
+    private let operationQ = OperationQueue()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        synchronizeTableAndRealm()
+    }
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
-//        self.tableView.rowHeight = 250
+        super.viewDidLoad()
         
         guard let realm = try? Realm() else { return }
         news = realm.objects(News.self)
-        profile = realm.objects(Profile.self)
         
         vkService.getNews() { news, error in
             if let error = error {
@@ -32,12 +35,37 @@ class NewsTableViewController: UITableViewController {
                 return
             } else if let news = news {
                 RealmProvider.save(items: news)
+                
+                DispatchQueue.main.async {
+                    self.tableView?.reloadData()
+                }
             }
         }
         
-//        vkService.getProfile(completion: { profile in
-//            RealmProvider.save(items: profile)
-//        })
+    }
+    
+    private func synchronizeTableAndRealm() {
+        guard let realm = try? Realm() else { return }
+        news = realm.objects(News.self)
+        
+        notificationToken = news?.observe { [weak self] (changes: RealmCollectionChange) in
+            guard let tableView = self?.tableView else { return }
+            
+            switch changes {
+            case .initial:
+                tableView.reloadData()
+            case .update(_, let deletions, let insertions, let modifications):
+                tableView.beginUpdates()
+                tableView.insertRows(at: insertions.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                tableView.deleteRows(at: deletions.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                tableView.reloadRows(at: modifications.map({ IndexPath(row: $0, section: 0) }), with: .none)
+                tableView.endUpdates()
+                break
+            case .error(let error):
+                fatalError("\(error)")
+                break
+            }
+        }
     }
     
     // MARK: - Table view data source

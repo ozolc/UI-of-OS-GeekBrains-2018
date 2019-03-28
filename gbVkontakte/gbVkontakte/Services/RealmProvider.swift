@@ -14,13 +14,13 @@ class RealmProvider {
     static func save<T: Object>(items: [T],
                                 config: Realm.Configuration = Realm.Configuration(deleteRealmIfMigrationNeeded: true),
                                 update: Bool = true) {
-        print(config.fileURL!)
+        print("save", config.fileURL!)
         
         do {
-            let realm = try Realm(configuration: self.deleteIfMigration)
             
+            let realm = try Realm(configuration: config)
             try realm.write {
-                realm.add(items, update: update)
+                    realm.add(items, update: update)
             }
             
         } catch {
@@ -28,16 +28,17 @@ class RealmProvider {
         }
     }
     
-    static func get<T: Object>(_ type: T.Type,
-                               config: Realm.Configuration = Realm.Configuration.defaultConfiguration) -> Results<T>? {
-        do {
-            let realm = try Realm(configuration: self.deleteIfMigration)
-            return realm.objects(type)
-        } catch {
-            print(error)
-        }
-        return nil
-    }
+    
+    //    static func get<T: Object>(_ type: T.Type,
+    //                               config: Realm.Configuration = Realm.Configuration.defaultConfiguration) -> Results<T>? {
+    //        do {
+    //            let realm = try Realm(configuration: self.deleteIfMigration)
+    //            return realm.objects(type)
+    //        } catch {
+    //            print(error)
+    //        }
+    //        return nil
+    //    }
     
     
 }

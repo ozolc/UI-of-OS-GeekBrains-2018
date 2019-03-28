@@ -59,8 +59,8 @@ class News: Object {
         self.postImage = json["photos"][0]["src"].stringValue
         
         self.post_id = json["post_id"].intValue
-        self.geoCoordinates = json["geo"]["coordinates"].stringValue
-        self.geoPlaceTitle = json["geo"]["place"]["title"].stringValue
+//        self.geoCoordinates = json["geo"]["coordinates"].stringValue
+//        self.geoPlaceTitle = json["geo"]["place"]["title"].stringValue
         
         self.commentsCount = json["comments"]["count"].intValue
         self.likesCount = json["likes"]["count"].intValue

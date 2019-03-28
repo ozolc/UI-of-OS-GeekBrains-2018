@@ -13,6 +13,7 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsTextLabel: UILabel!
     @IBOutlet weak var newsImageView: UIImageView!
     @IBOutlet weak var userImageView: UIImageView!
+    @IBOutlet weak var dateTimeLabel: UILabel!
     
     @IBOutlet weak var likeImageView: UIImageView!
     @IBOutlet weak var shareImageView: UIImageView!
@@ -48,6 +49,14 @@ class NewsTableViewCell: UITableViewCell {
     
         userNameLabel.text = news.titlePostLabel
         newsTextLabel.text = news.postText
+        
+        let date = Date(timeIntervalSince1970: news.titlePostTime)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.medium //Set time style
+        dateFormatter.dateStyle = DateFormatter.Style.medium //Set date style
+        let localDate = dateFormatter.string(from: date)
+        dateTimeLabel.text = localDate
+        
     }
     
     private func setupGestureRecognizer(_ localSender: UIImageView) {

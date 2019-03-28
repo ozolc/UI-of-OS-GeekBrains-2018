@@ -522,20 +522,31 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xZD-yq-nVS">
+                                            <rect key="frame" x="80" y="16" width="324" height="50"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="5ZC-x8-CFw" firstAttribute="leading" secondItem="bsn-ZD-vOR" secondAttribute="leadingMargin" id="CUM-d7-gzK"/>
+                                        <constraint firstAttribute="trailing" secondItem="xZD-yq-nVS" secondAttribute="trailing" constant="10" id="Qak-jj-bCA"/>
                                         <constraint firstItem="5ZC-x8-CFw" firstAttribute="top" secondItem="axM-8P-rYD" secondAttribute="bottom" constant="10" id="S0r-JH-t2H"/>
+                                        <constraint firstItem="xZD-yq-nVS" firstAttribute="top" secondItem="afz-LQ-RQx" secondAttribute="top" constant="5" id="Wa7-wb-WaC"/>
                                         <constraint firstItem="afz-LQ-RQx" firstAttribute="leading" secondItem="axM-8P-rYD" secondAttribute="trailing" constant="10" id="eWz-fk-IHs"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="5ZC-x8-CFw" secondAttribute="bottom" id="hw8-K4-QOX"/>
                                         <constraint firstItem="axM-8P-rYD" firstAttribute="leading" secondItem="bsn-ZD-vOR" secondAttribute="leadingMargin" id="mqr-es-ijH"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="5ZC-x8-CFw" secondAttribute="trailing" id="n98-Dh-YKZ"/>
                                         <constraint firstItem="afz-LQ-RQx" firstAttribute="trailing" secondItem="bsn-ZD-vOR" secondAttribute="trailingMargin" constant="10" id="ndH-oW-cx7"/>
+                                        <constraint firstItem="xZD-yq-nVS" firstAttribute="leading" secondItem="axM-8P-rYD" secondAttribute="trailing" constant="10" id="pE6-Df-hOH"/>
                                         <constraint firstItem="axM-8P-rYD" firstAttribute="top" secondItem="bsn-ZD-vOR" secondAttribute="topMargin" id="pdu-XE-JhV"/>
+                                        <constraint firstItem="5ZC-x8-CFw" firstAttribute="top" secondItem="xZD-yq-nVS" secondAttribute="bottom" constant="5" id="tR3-d2-f01"/>
                                         <constraint firstItem="afz-LQ-RQx" firstAttribute="top" secondItem="bsn-ZD-vOR" secondAttribute="topMargin" id="vdU-aY-lC5"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="dateTimeLabel" destination="xZD-yq-nVS" id="pEQ-Zn-vTj"/>
                                     <outlet property="newsTextLabel" destination="5ZC-x8-CFw" id="nbg-ZE-Y64"/>
                                     <outlet property="userImageView" destination="axM-8P-rYD" id="dYY-pC-G8S"/>
                                     <outlet property="userNameLabel" destination="afz-LQ-RQx" id="Y0a-ss-kSb"/>

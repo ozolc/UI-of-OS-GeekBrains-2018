@@ -67,10 +67,7 @@ class VKServices {
             case .success(let value):
                 let json = JSON(value)
                 let avatar = json["response"][0]["photo_50"].stringValue
-//                let profile = json["response"].arrayValue.map { json in
-//                    return Profile(json: json) }
                 completion(avatar)
-//                completion(profile, avatar)
                 
             case .failure(let error):
                 print(error)
@@ -83,6 +80,7 @@ class VKServices {
         let path = "/method/photos.getAll"
         let url = Data.baseUrl + path
         
+        
         let params: Parameters = [
             "access_token": Session.shared.token,
             "photo_sizes": 1,
@@ -94,21 +92,27 @@ class VKServices {
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
             
             switch response.result {
-                
             case .success(let value):
+                var photos = [Photo]()
                 let json = JSON(value)
-                var photos = json["response"]["items"].arrayValue.map { json in
-                    return Photo(json: json)
-                }
-                var sortPhoto: [Photo] = []
-                for photo in photos {
-                    if photo.url != "" {
-                        sortPhoto.append(photo)
-                    }
-                }
-                photos = sortPhoto
-                completion(photos)
                 
+                let jsonGroup = DispatchGroup()
+                
+                DispatchQueue.global().async(group: jsonGroup) {
+                    photos = json["response"]["items"].arrayValue.map { json in
+                        return Photo(json: json)
+                    }
+                    var sortPhoto: [Photo] = []
+                    for photo in photos {
+                        if photo.url != "" {
+                            sortPhoto.append(photo)
+                        }
+                    }
+                    photos = sortPhoto
+                }
+                jsonGroup.notify(queue: DispatchQueue.main) {
+                    completion(photos)
+                }
             case .failure(let error):
                 print(error)
             }
@@ -132,10 +136,17 @@ class VKServices {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                let groups = json["response"]["items"].arrayValue.map { json in
-                    return Group(json: json)
+                let jsonGroup = DispatchGroup()
+                var groups = [Group]()
+                
+                DispatchQueue.global().async(group: jsonGroup) {
+                    groups = json["response"]["items"].arrayValue.map { json in
+                        return Group(json: json)
+                    }
                 }
-                completion(groups)
+                jsonGroup.notify(queue: DispatchQueue.main) {
+                    completion(groups)
+                }
                 
             case .failure(let error):
                 print(error)
@@ -150,40 +161,52 @@ class VKServices {
         
         let params: Parameters = [
             "access_token": Session.shared.token,
-            "filters": "post",
-            "count": 30,
+            "filters": "post, photo",
+            "count": 100,
             "v": Data.versionAPI
         ]
         
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
             switch response.result {
             case .success(let value):
-                let json = JSON(value)
-                let news = json["response"]["items"].arrayValue.map { News(json: $0) }.filter {!$0.postText.isEmpty }
-                let newsProfiles = json["response"]["profiles"].arrayValue.map { User(json: $0) }
-                let newsGroups = json["response"]["groups"].arrayValue.map { Group(json: $0) }
                 
-                for i in 0..<news.count {
-                    if news[i].postSource_id < 0 {
-                        for ii in 0..<newsGroups.count {
-                            if news[i].postSource_id * -1 == newsGroups[ii].id {
-                                news[i].titlePostId = newsGroups[ii].id
-                                news[i].titlePostLabel = newsGroups[ii].name
-                                news[i].titlePostPhoto = newsGroups[ii].photo
+                let json = JSON(value)
+                var news = [News]()
+                var newsProfiles = [User]()
+                var newsGroups = [Group]()
+                
+                let jsonGroup = DispatchGroup()
+                
+                DispatchQueue.global().async(group: jsonGroup) {
+                    news = json["response"]["items"].arrayValue.map { News(json: $0) }.filter {!$0.postText.isEmpty }
+                    newsProfiles = json["response"]["profiles"].arrayValue.map { User(json: $0) }
+                    newsGroups = json["response"]["groups"].arrayValue.map { Group(json: $0) }
+                    
+                    for i in 0..<news.count {
+                        if news[i].postSource_id < 0 {
+                            for ii in 0..<newsGroups.count {
+                                if news[i].postSource_id * -1 == newsGroups[ii].id {
+                                    news[i].titlePostId = newsGroups[ii].id
+                                    news[i].titlePostLabel = newsGroups[ii].name
+                                    news[i].titlePostPhoto = newsGroups[ii].photo
+                                }
                             }
-                        }
-                    } else {
-                        
-                        for iii in 0..<newsProfiles.count {
-                            if news[i].postSource_id == newsProfiles[iii].id {
-                                news[i].titlePostId = newsProfiles[iii].id
-                                news[i].titlePostLabel = newsProfiles[iii].fullName
-                                news[i].titlePostPhoto = newsProfiles[iii].avatar.isEmpty ? Session.shared.avatar : newsProfiles[iii].avatar
+                        } else {
+                            
+                            for iii in 0..<newsProfiles.count {
+                                if news[i].postSource_id == newsProfiles[iii].id {
+                                    news[i].titlePostId = newsProfiles[iii].id
+                                    news[i].titlePostLabel = newsProfiles[iii].fullName
+                                    news[i].titlePostPhoto = newsProfiles[iii].avatar.isEmpty ? Session.shared.avatar : newsProfiles[iii].avatar
+                                }
                             }
                         }
                     }
                 }
-                completion?(news, nil)
+                
+                jsonGroup.notify(queue: DispatchQueue.main) {
+                    completion?(news, nil)                    
+                }
             case .failure(let error):
                 completion?(nil, error)
             }

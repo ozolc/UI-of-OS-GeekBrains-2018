@@ -40,7 +40,9 @@ import RealmSwift
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        users = RealmProvider.get(User.self)
+        guard let realm = try? Realm() else { return }
+        users = realm.objects(User.self)
+//        users = RealmProvider.get(User.self)
         
         notificationToken = users?.observe { [weak self] changes in
             guard let self = self else { return }
