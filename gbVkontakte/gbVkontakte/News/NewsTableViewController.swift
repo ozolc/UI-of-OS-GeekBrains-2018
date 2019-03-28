@@ -13,33 +13,32 @@ import RealmSwift
 class NewsTableViewController: UITableViewController {
     
     private let vkService = VKServices()
-    var items: Results<Items>?
-    
-    let newsTexts = [String](News.news.keys)
-    let newsImages = [String](News.news.values)
+    private var news: Results<News>?
+    private var notificationToken: NotificationToken?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
-        do {
-            let realm = try Realm(configuration: config)
-            self.items = realm.objects(Items.self)
-        } catch {
-            print(error)
-        }
+//        self.tableView.rowHeight = 250
         
-//        items = RealmProvider.get(Items.self)
+        guard let realm = try? Realm() else { return }
+        news = realm.objects(News.self)
         
-        vkService.getNews() { [weak self] items in
-            RealmProvider.save(items: items)
-            
-            DispatchQueue.main.async {
-                self?.tableView?.reloadData()
+        vkService.getNews() { news, error in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            } else if let news = news {
+                RealmProvider.save(items: news)
+//                DispatchQueue.main.async {
+//                    self?.tableView.reloadData()
+//                }
+//                print(news)
+                print(news.count)
             }
         }
+        
     }
-    
     
     // MARK: - Table view data source
     
@@ -50,16 +49,17 @@ class NewsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //        return newsTexts.count
-        return items?.count ?? 0
+        return news?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCellId", for: indexPath) as? NewsTableViewCell
+        else { return UITableViewCell() }
         
-        if let items = items {
-            cell.configure(with: items[indexPath.row])
+        if let news = news {
+            cell.configure(with: news[indexPath.row])
         }
-        
+//        print(news?.count, "No count")
         return cell
     }
     

@@ -11,12 +11,12 @@ import UIKit
 class ActionOnVKController: UIViewController {
 
     @IBOutlet weak var searchGroupTextField: UITextField!
-    let groupsByRequest = GetGroupsByRequest()
+//    let groupsByRequest = GetGroupsByRequest()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        groupsByRequest.delegate = self
+//        groupsByRequest.delegate = self
         self.searchGroupTextField.delegate = self
     }
     
@@ -33,7 +33,7 @@ class ActionOnVKController: UIViewController {
     }
     
     @IBAction func searchGroupByRequestPressed(_ sender: Any) {
-        searchButtonPressed()
+//        searchButtonPressed()
         searchGroupTextField.text = ""
     }
     
@@ -66,18 +66,18 @@ extension ActionOnVKController: GetGroupsByRequestDelegate {
 extension ActionOnVKController: UITextFieldDelegate {
 //    func textFieldShouldReturn(textField: UITextField) -> Bool {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchButtonPressed()
+//        searchButtonPressed()
         textField.text = ""
         return true
     }
     
-    private func searchButtonPressed() {
-        guard let text = searchGroupTextField.text else { return }
-        
-        if searchGroupTextField.text != "" {
-            groupsByRequest.searchGroup(query: text)
-        } else {
-            showErrorMessage(title: "Ошибка", message: "Неверные данные для запроса")
-        }
-    }
+//    private func searchButtonPressed() {
+//        guard let text = searchGroupTextField.text else { return }
+//
+//        if searchGroupTextField.text != "" {
+//            groupsByRequest.searchGroup(query: text)
+//        } else {
+//            showErrorMessage(title: "Ошибка", message: "Неверные данные для запроса")
+//        }
+//    }
 }

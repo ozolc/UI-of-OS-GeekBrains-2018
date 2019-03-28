@@ -66,10 +66,6 @@ class VKServices {
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
             
             switch response.result {
-                //            case .success(let value):
-                //                let json = JSON(value)
-                //                let photos = json["response"]["items"].arrayValue.map { Photo(json: $0) }.filter { !$0.url.isEmpty }
-                //                completion(photos)
                 
             case .success(let value):
                 let json = JSON(value)
@@ -120,61 +116,49 @@ class VKServices {
     }
     
     // Получение списка новостей
-    public func getNews(completion: @escaping ([Items]) -> Void) {
-        //    public func getNews() {
+    public func getNews(completion: (([News]?, Error?) -> Void)? = nil) {
         let path = "/method/newsfeed.get"
         let url = Data.baseUrl + path
         
         let params: Parameters = [
             "access_token": Session.shared.token,
             "filters": "post",
-            //            "count": 5,
+            "count": 30,
             "v": Data.versionAPI
         ]
         
         VKServices.sharedManager.request(url, method: .get, parameters: params).responseJSON { response in
-            
-            //            let json = JSON(value)
-            //            var photos = json["response"]["items"].arrayValue.map { json in
-            //                return Photo(json: json)
-            //            }
-            //            var sortPhoto: [Photo] = []
-            //            for photo in photos {
-            //                if photo.url != "" {
-            //                    sortPhoto.append(photo)
-            //                }
-            //            }
-            //            photos = sortPhoto
-            //            completion(photos)
-            
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                print(json)
-                var items = json["response"]["items"].arrayValue.map { json in
-                    return Items(json: json)
-                }
+                let news = json["response"]["items"].arrayValue.map { News(json: $0) }.filter {!$0.postText.isEmpty }
+                let newsProfiles = json["response"]["profiles"].arrayValue.map { User(json: $0) }
+                let newsGroups = json["response"]["groups"].arrayValue.map { Group(json: $0) }
                 
-                for item in items {
-                    items.append(item)
+                for i in 0..<news.count {
+                    if news[i].postSource_id < 0 {
+                        for ii in 0..<newsGroups.count {
+                            if news[i].postSource_id * -1 == newsGroups[ii].id {
+                                news[i].titlePostId = newsGroups[ii].id
+                                news[i].titlePostLabel = newsGroups[ii].name
+                                news[i].titlePostPhoto = newsGroups[ii].photo
+                            }
+                        }
+                    } else {
+                        for iii in 0..<newsProfiles.count {
+                            if news[i].postSource_id == newsProfiles[iii].id {
+                                news[i].titlePostId = newsProfiles[iii].id
+                                news[i].titlePostLabel = newsProfiles[iii].fullName
+                                news[i].titlePostPhoto = newsProfiles[iii].avatar
+                            }
+                        }
+                    }
                 }
-                completion(items)
-                
+//                print(news)
+                completion?(news, nil)
             case .failure(let error):
-                print(error)
+                completion?(nil, error)
             }
-        }
-    }
-    
-    // Сохранение данных в Realm
-    private func saveToRealm<T: Object>(_ data: [T]) {
-        do {
-            let realm = try Realm()
-            realm.beginWrite()
-            realm.add(data)
-            try realm.commitWrite()
-        } catch {
-            print(error)
         }
     }
 }

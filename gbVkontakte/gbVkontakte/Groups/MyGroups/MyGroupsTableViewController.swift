@@ -11,7 +11,7 @@ import WebKit
 import Kingfisher
 import RealmSwift
 
-var availableGroups = Groups.allGroups.sorted()
+//var availableGroups = Groups.allGroups.sorted()
 var myGroups = [String]()
 var filteredGroup = [Group]()
 
@@ -146,25 +146,25 @@ class MyGroupsTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            availableGroups.append(myGroups.remove(at: indexPath.row))
+//            availableGroups.append(myGroups.remove(at: indexPath.row))
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
     
-    @IBAction func addGroup(segue: UIStoryboardSegue) {
-        
-            let availableGroupController = segue.source as! AvailableGroupTableViewController
-            if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
-                let group = availableGroups[indexPath.row]
-                if !myGroups.contains(group) {
-                    myGroups.append(group)
-                    myGroups.sort()
-                    availableGroups.remove(at: indexPath.row)
-                    tableView.reloadData()
-                }
-            }
-//        }
-    }
+//    @IBAction func addGroup(segue: UIStoryboardSegue) {
+//        
+//            let availableGroupController = segue.source as! AvailableGroupTableViewController
+//            if let indexPath = availableGroupController.tableView.indexPathForSelectedRow {
+//                let group = availableGroups[indexPath.row]
+//                if !myGroups.contains(group) {
+//                    myGroups.append(group)
+//                    myGroups.sort()
+//                    availableGroups.remove(at: indexPath.row)
+//                    tableView.reloadData()
+//                }
+//            }
+////        }
+//    }
     
     func searchBarIsEmpty() -> Bool {
         // Returns true if the text is empty or nil

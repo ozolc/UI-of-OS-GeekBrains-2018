@@ -13,7 +13,8 @@ protocol GetGroupsByRequestDelegate: class {
     func searchGroup(query: String)
 }
 
-class GetGroupsByRequest {
+
+/* class GetGroupsByRequest {
     
     public weak var delegate: GetGroupsByRequestDelegate?
     
@@ -43,3 +44,4 @@ class GetGroupsByRequest {
         }
     }
 }
+*/

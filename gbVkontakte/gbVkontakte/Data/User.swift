@@ -15,6 +15,7 @@ class User: Object {
     @objc dynamic var id = 0
     @objc dynamic var first_name = ""
     @objc dynamic var last_name = ""
+    @objc dynamic var fullName = ""
     @objc dynamic var avatar = ""
     var photos = List<Photo>()
     
@@ -23,6 +24,7 @@ class User: Object {
         
         self.id = json["id"].intValue
         self.first_name = json["first_name"].stringValue
+        self.fullName = json["last_name"].stringValue + " " + json["first_name"].stringValue
         self.last_name = json["last_name"].stringValue
         self.avatar = json["photo_200_orig"].stringValue
         self.photos.append(objectsIn: photos)

@@ -12,11 +12,13 @@ class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var newsTextLabel: UILabel!
     @IBOutlet weak var newsImageView: UIImageView!
+    @IBOutlet weak var userImageView: UIImageView!
     
     @IBOutlet weak var likeImageView: UIImageView!
     @IBOutlet weak var shareImageView: UIImageView!
     @IBOutlet weak var commentImageView: UIImageView!
     
+    @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var repostsLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
@@ -30,23 +32,24 @@ class NewsTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
      
-        setupGestureRecognizer(likeImageView)
-        setupGestureRecognizer(shareImageView)
-        setupGestureRecognizer(commentImageView)
-        setupGestureRecognizer(newsImageView)
+//        setupGestureRecognizer(likeImageView)
+//        setupGestureRecognizer(shareImageView)
+//        setupGestureRecognizer(commentImageView)
+//        setupGestureRecognizer(newsImageView)
     }
     
-    public func configure(with items: Items) {
-        newsTextLabel.text = "\(items.text)"
+    public func configure(with news: News) {
+        let isGroup = news.postSource_id < 0 ? true : false
         
-        print("reposts - ", items.reposts)
-        print("likes - ", items.likes)
-        print("photos - ", items.photo)
-        likeLabel.text = String(items.likes)
-        repostsLabel.text = String(items.reposts)
-        newsImageView.kf.setImage(with: URL(string: items.photo))
+        if isGroup {
+            let urlUserImage = news.titlePostPhoto
+            userImageView.kf.setImage(with: URL(string: urlUserImage))
+            
+        }
+        userNameLabel.text = news.titlePostLabel
+        newsTextLabel.text = news.postText
         
-//        newsImageView.kf.setImage(with: URL(string: group.photo))
+        
     }
     
     private func setupGestureRecognizer(_ localSender: UIImageView) {

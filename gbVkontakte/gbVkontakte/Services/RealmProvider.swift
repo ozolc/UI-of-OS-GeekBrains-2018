@@ -20,7 +20,7 @@ class RealmProvider {
             let realm = try Realm(configuration: self.deleteIfMigration)
             
             try realm.write {
-                realm.add(items, update: true)
+                realm.add(items, update: update)
             }
             
         } catch {

@@ -31,9 +31,7 @@ class FriendCollectionViewController: UICollectionViewController {
         bindObserver()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-
-    }
+    
     
     func getPhoto() {
         let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
