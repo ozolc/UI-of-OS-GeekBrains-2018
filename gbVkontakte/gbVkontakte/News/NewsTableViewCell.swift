@@ -36,7 +36,7 @@ class NewsTableViewCell: UITableViewCell {
         setupGestureRecognizer(likeImageView)
         setupGestureRecognizer(shareImageView)
         setupGestureRecognizer(commentImageView)
-        setupGestureRecognizer(newsImageView)
+//        setupGestureRecognizer(newsImageView)
     }
     
     public func configure(with news: News) {
